@@ -8,7 +8,6 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
-// import { Image } from "@mantine/core";
 import React from "react";
 
 const About = () => {
@@ -45,7 +44,7 @@ const About = () => {
         </div>
       </div>
 
-      <div className="h-screen w-full flex py-24 px-12 justify-between bg-[#F5F5F5]">
+      <div className="h-full w-full flex py-24 px-12 justify-between bg-[#F5F5F5]">
         <div className="w-full flex items-center justify-center">
           <Image
             src={"/aboutPage.png"}
@@ -68,6 +67,38 @@ const About = () => {
           <h1 className="text-4xl text-[#333333] font-semibold">
             Our Company Overview
           </h1>
+          <p>
+            Hogg Anderson Business Solutions Limited is a dynamic and trusted
+            accounting and business solutions firm, specializing in cost
+            accounting, inventory management, and financial optimization for the
+            hospitality industry. With over 20 years of experience, we provide
+            tailored services that empower restaurants, lounges, and hotels to
+            streamline their operations, reduce costs, and improve
+            profitability.
+          </p>
+          <div className="flex gap-8">
+            <button className="font-normal btn rounded-sm h-fit min-h-fit py-4 hover:text-white bg-[#FFCC99] border-none text-white text-lg px-6">
+              Company
+            </button>
+            <button className="font-normal btn rounded-sm h-fit min-h-fit py-4 hover:text-white bg-[#E8E8E8] border-none text-black text-lg px-6">
+              Industries
+            </button>
+            <button className="font-normal btn rounded-sm h-fit min-h-fit py-4 hover:text-white bg-[#E8E8E8] border-none text-black text-lg px-6">
+              Our Team
+            </button>
+          </div>
+          <p>
+            Our expert team combines deep industry knowledge with cutting-edge
+            technology to deliver innovative solutions, helping our clients
+            achieve financial stability and growth. At Hogg Anderson, we pride
+            ourselves on being a strategic partner, dedicated to the long-term
+            success of our clients through precision, transparency, and
+            expertise.
+          </p>
+
+          <button className="font-normal btn rounded-sm h-fit min-h-fit py-4 hover:text-[#333333] hover:bg-[#E8E8E8] bg-[#333333] border-none text-white text-lg px-6">
+            Learn More
+          </button>
         </div>
       </div>
     </div>
