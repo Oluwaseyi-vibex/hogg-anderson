@@ -1,4 +1,4 @@
-import { NavBar } from "@/components";
+import { Footer, NavBar } from "@/components";
 import "./globals.css";
 import { Colors } from "@/utils/font/color";
 import "@mantine/core/styles.css";
@@ -17,6 +17,7 @@ export default function RootLayout({ children }) {
         <MantineProvider>
           <NavBar />
           {children}
+          <Footer />
         </MantineProvider>
       </body>
     </html>

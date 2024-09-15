@@ -19,11 +19,13 @@
     "@mantine/hooks": "^7.12.2",
     "@tabler/icons-react": "^3.16.0",
     "dayjs": "^1.11.13",
+    "embla-carousel-autoplay": "^7.1.0",
     "embla-carousel-react": "^8.2.1",
     "next": "14.2.8",
     "react": "^18",
     "react-dom": "^18",
-    "react-fast-marquee": "^1.6.5"
+    "react-fast-marquee": "^1.6.5",
+    "react-responsive-carousel": "^3.2.23"
   },
   "devDependencies": {
     "daisyui": "^4.12.10",

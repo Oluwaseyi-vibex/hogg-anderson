@@ -1,95 +1,70 @@
-import { Carousel } from "@mantine/carousel";
-import { useMediaQuery } from "@mantine/hooks";
-import {
-  Paper,
-  Text,
-  Title,
-  Button,
-  useMantineTheme,
-  rem,
-} from "@mantine/core";
-import classes from "./CardsCarousel.module.css";
+import React from "react";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // Import carousel styles
+import { Carousel } from "react-responsive-carousel";
 
-function Card({ image, title, category }) {
-  return (
-    <Paper
-      shadow="md"
-      p="xl"
-      radius="md"
-      style={{ backgroundImage: `url(${image})` }}
-      className={classes.card}
-    >
-      <div>
-        <Text className={classes.category} size="xs">
-          {category}
-        </Text>
-        <Title order={3} className={classes.title}>
-          {title}
-        </Title>
-      </div>
-      <Button variant="white" color="dark">
-        Read article
-      </Button>
-    </Paper>
-  );
-}
-
-const data = [
-  {
-    image:
-      "https://images.unsplash.com/photo-1508193638397-1c4234db14d8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
-    title: "Best forests to visit in North America",
-    category: "nature",
-  },
-  {
-    image:
-      "https://images.unsplash.com/photo-1559494007-9f5847c49d94?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
-    title: "Hawaii beaches review: better than you think",
-    category: "beach",
-  },
-  {
-    image:
-      "https://images.unsplash.com/photo-1608481337062-4093bf3ed404?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
-    title: "Mountains at night: 12 best locations to enjoy the view",
-    category: "nature",
-  },
-  {
-    image:
-      "https://images.unsplash.com/photo-1507272931001-fc06c17e4f43?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
-    title: "Aurora in Norway: when to visit for best experience",
-    category: "nature",
-  },
-  {
-    image:
-      "https://images.unsplash.com/photo-1510798831971-661eb04b3739?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
-    title: "Best places to visit this winter",
-    category: "tourism",
-  },
-  {
-    image:
-      "https://images.unsplash.com/photo-1582721478779-0ae163c05a60?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
-    title: "Active volcanos reviews: travel at your own risk",
-    category: "nature",
-  },
-];
-
-export function CardsCarousel() {
-  const theme = useMantineTheme();
-  const mobile = useMediaQuery(`(max-width: ${theme.breakpoints.sm})`);
-  const slides = data.map((item) => (
-    <Carousel.Slide key={item.title}>
-      <Card {...item} />
-    </Carousel.Slide>
-  ));
+const TestimonialCarousel = () => {
+  const testimonials = [
+    {
+      name: "John Doe",
+      feedback:
+        "Hogg Anderson's cost accounting services have drastically improved our financial processes. Highly recommended!",
+      position: "Restaurant Owner",
+    },
+    {
+      name: "Jane Smith",
+      feedback:
+        "Their inventory management has helped us reduce waste and improve profitability. A fantastic service!",
+      position: "Hotel Manager",
+    },
+    {
+      name: "Michael Brown",
+      feedback:
+        "The variance analysis provided by the team has been crucial in identifying cost-saving opportunities.",
+      position: "Lounge Owner",
+    },
+    {
+      name: "Emily Davis",
+      feedback:
+        "We’ve seen significant improvements in our business planning since working with Hogg Anderson. Great expertise!",
+      position: "Restaurant Manager",
+    },
+    {
+      name: "Robert Wilson",
+      feedback:
+        "Their attention to detail and accuracy in financial reporting is unmatched. We’re very happy with the service.",
+      position: "Hotel General Manager",
+    },
+    {
+      name: "Linda Johnson",
+      feedback:
+        "Hogg Anderson has helped us better manage our inventory turnover and improve our overall efficiency.",
+      position: "Lounge Manager",
+    },
+  ];
 
   return (
-    <Carousel
-      slideSize={{ base: "100%", sm: "50%" }}
-      slideGap={{ base: rem(2), sm: "xl" }}
-      align="start"
-      slidesToScroll={mobile ? 1 : 2}
-    >
-      {slides}
-    </Carousel>
+    <section className="testimonial-section my-28">
+      <h2 className="text-4xl font-bold text-center my-8">
+        What Our Clients Say
+      </h2>
+      <Carousel
+        showArrows={true}
+        infiniteLoop={true}
+        showThumbs={false}
+        showStatus={false}
+        autoPlay={true}
+        interval={5000}
+      >
+        {testimonials.map((testimonial, index) => (
+          <div key={index} className="p-6 bg-white rounded shadow-md">
+            <p className="text-lg italic">"{testimonial.feedback}"</p>
+            <p className="mt-4 font-bold text-sm">{testimonial.name}</p>
+            <p className="text-sm mb-6 text-gray-500">{testimonial.position}</p>
+          </div>
+        ))}
+      </Carousel>
+    </section>
   );
-}
+};
+
+export default TestimonialCarousel;

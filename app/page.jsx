@@ -8,7 +8,8 @@ import { FeaturesTitle } from "@/components/features";
 import { Button } from "@mantine/core";
 import { IconArrowRight, IconSignRight } from "@tabler/icons-react";
 import GetInTouch from "@/components/contact";
-import { CardsCarousel } from "@/components/testimonialCarousel";
+import TestimonialCarousel from "@/components/testimonialCarousel";
+
 export default function Home() {
   return (
     <div className={`${inter.className} px-20 mt-14`}>
@@ -21,7 +22,6 @@ export default function Home() {
             Inventory
             <div className="relative">
               <span className="relative z-10">
-                {" "}
                 <span className="relative z-10">Management</span>{" "}
                 <span className="w-full absolute h-[40%] bottom-4 left-0 z-0 bg-[#E1B6CA]"></span>
               </span>
@@ -247,7 +247,7 @@ export default function Home() {
 
       <GetInTouch />
 
-      <CardsCarousel />
+      <TestimonialCarousel />
     </div>
   );
 }
