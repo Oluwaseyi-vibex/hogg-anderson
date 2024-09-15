@@ -7,7 +7,7 @@ import { IconArrowRight } from "@tabler/icons-react";
 const NavBar = () => {
   return (
     <div
-      className={`${lexendPeta.className} sticky top-5 z-50 w-full rounded-2xl flex items-center justify-center navbar font-semibold  p-5  bg-[#333333] border border-white text-[#F5F5F5]`}
+      className={`${lexendPeta.className} sticky top-0 z-50 w-full  flex items-center justify-center navbar font-semibold  p-5  bg-[#333333] text-[#F5F5F5]`}
     >
       <div className="navbar-start">
         <div className="dropdown">
@@ -53,10 +53,10 @@ const NavBar = () => {
             </li>
           </ul>
         </div>
-        <a className="btn btn-ghost text-2xl">Logo</a>
+        <a className="btn btn-ghost text-xl">Logo</a>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal text-lg px-1">
+        <ul className="menu menu-horizontal text-md px-1">
           <li>
             <Link href="/">Home</Link>
           </li>
@@ -91,10 +91,10 @@ const NavBar = () => {
           variant="gradient"
           bg={"#4169E1"}
           // gradient={{ deg: 133, from: "pink", to: "black" }}
-          size="lg"
+          size="md"
           radius="lg"
-          w={200}
-          h={55}
+          w={180}
+          h={45}
         >
           Get started
         </Button>
