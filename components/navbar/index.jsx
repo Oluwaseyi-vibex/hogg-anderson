@@ -92,7 +92,7 @@ const NavBar = () => {
           gradient={{ deg: 133, from: "pink", to: "black" }}
           size="md"
           radius="md"
-          w={150}
+          w={220}
         >
           Get started
         </Button>
