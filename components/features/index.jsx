@@ -46,18 +46,13 @@ const features = [
 export function FeaturesTitle() {
   const items = features.map((feature) => (
     <div key={feature.title}>
-      <ThemeIcon
-        size={44}
-        radius="md"
-        variant="gradient"
-        gradient={{ deg: 133, from: "pink", to: "black" }}
-      >
+      <ThemeIcon size={44} radius="md" variant="gradient" bg={"#FFCC99"}>
         <feature.icon
           style={{ width: rem(26), height: rem(26) }}
           stroke={1.5}
         />
       </ThemeIcon>
-      <Text fz="lg" mt="sm" fw={500}>
+      <Text fz="lg" color="#F5F5F5" className="font-bold" mt="sm" fw={500}>
         {feature.title}
       </Text>
       <Text c="dimmed" fz="sm">
@@ -70,7 +65,7 @@ export function FeaturesTitle() {
     <div className={classes.wrapper}>
       <Grid gutter={80}>
         <Grid.Col span={{ base: 12, md: 5 }}>
-          <Title className={classes.title} order={2}>
+          <Title className={classes.title} c={"white"} order={2}>
             Why Accurate Monthly Inventory Valuation Matters
           </Title>
           <Text c="dimmed">
@@ -83,7 +78,7 @@ export function FeaturesTitle() {
 
           <Button
             variant="gradient"
-            gradient={{ deg: 133, from: "pink", to: "black" }}
+            bg={"#4169E1"}
             size="lg"
             radius="md"
             mt="xl"

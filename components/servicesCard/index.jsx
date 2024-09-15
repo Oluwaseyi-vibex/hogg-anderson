@@ -7,8 +7,8 @@ const ServicesCard = ({ img, title, description }) => {
       className={`${lexendPeta.className} flex w-[350px] h-fit text-center flex-col gap-2 items-center justify-center`}
     >
       <Image src={img} alt="" width={500} height={500} className={`w-[50%]`} />
-      <h1 className="text-white font-semibold text-xl">{title}</h1>
-      <p className="text-sm text-white/80">{description}</p>
+      <h1 className="text-black font-semibold text-xl">{title}</h1>
+      <p className="text-sm text-black/80">{description}</p>
     </div>
   );
 };

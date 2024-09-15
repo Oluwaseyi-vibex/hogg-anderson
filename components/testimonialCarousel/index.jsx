@@ -44,7 +44,7 @@ const TestimonialCarousel = () => {
 
   return (
     <section className="testimonial-section my-28">
-      <h2 className="text-4xl font-bold text-center my-8">
+      <h2 className="text-4xl font-bold text-[#F5F5F5] text-center my-8">
         What Our Clients Say
       </h2>
       <Carousel
@@ -56,10 +56,16 @@ const TestimonialCarousel = () => {
         interval={5000}
       >
         {testimonials.map((testimonial, index) => (
-          <div key={index} className="p-6 bg-white rounded shadow-md">
-            <p className="text-lg italic">&quot;{testimonial.feedback}&quot;</p>
-            <p className="mt-4 font-bold text-sm">{testimonial.name}</p>
-            <p className="text-sm mb-6 text-gray-500">{testimonial.position}</p>
+          <div key={index} className="p-6  rounded shadow-md">
+            <p className="text-lg text-[#4169E1] italic">
+              &quot;{testimonial.feedback}&quot;
+            </p>
+            <p className="mt-4 font-bold text-[#F5F5F5] text-sm">
+              {testimonial.name}
+            </p>
+            <p className="text-sm mb-6 text-[#F5F5F5]/50">
+              {testimonial.position}
+            </p>
           </div>
         ))}
       </Carousel>

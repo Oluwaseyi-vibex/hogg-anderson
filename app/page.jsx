@@ -15,20 +15,20 @@ export default function Home() {
     <div className={`${inter.className} px-20 mt-14`}>
       <main className="flex w-full items-center justify-between">
         <div className="flex flex-col gap-3 w-fit">
-          <p className="rounded-full shadow-md shadow-black/25 cursor-pointer font-semibold border-black border-2 w-fit bg-transparent py-1 px-8 text-xs text-black">
+          <p className="rounded-full shadow-md shadow-black cursor-pointer font-light border-white border-[0.5px] w-fit bg-transparent py-1 px-8 text-xs text-[#4169E1]">
             Hogg Anderson Business Solutions Limited
           </p>
-          <h1 className="text-[70px] text-black leading-tight font-semibold ">
+          <h1 className="text-[70px] text-[#F5F5F5] leading-tight font-semibold ">
             Inventory
             <div className="relative">
               <span className="relative z-10">
                 <span className="relative z-10">Management</span>{" "}
-                <span className="w-full absolute h-[40%] bottom-4 left-0 z-0 bg-[#E1B6CA]"></span>
+                <span className="w-full absolute h-[40%] bottom-4 left-0 z-0 bg-[#4169E1]"></span>
               </span>
             </div>
             Solutions.
           </h1>
-          <p className="text-sm text-black w-[500px]">
+          <p className="text-sm text-[#F5F5F5]/40 w-[500px]">
             A trusted accounting and business solutions firm specializing in
             inventory management outsourcing restaurants, lounge and hotel and
             others in hospitality industry. And extensive expertise to optimize
@@ -37,8 +37,9 @@ export default function Home() {
           <Button
             rightSection={<IconArrowRight size={20} />}
             variant="gradient"
-            gradient={{ deg: 133, from: "pink", to: "black" }}
+            // gradient={{ deg: 133, from: "pink", to: "black" }}
             size="xl"
+            bg={"#4169E1"}
             radius="md"
             mt="xl"
             justify="space-between"
@@ -50,11 +51,11 @@ export default function Home() {
 
         <div className="flex w-full gap-3 items-center justify-end">
           <Image
-            src="/hero3.jpg"
+            src="/hero2.jpg"
             alt=""
             width={1000}
             height={1000}
-            className="w-[85%] rounded-xl"
+            className="w-[90%] rounded-xl"
           />
           {/* <div className="flex flex-col gap-2">
             <div
@@ -118,12 +119,12 @@ export default function Home() {
         </div>
       </main>
 
-      <div className="w-full flex py-32 px-16 bg-black h-full rounded-b-3xl mt-24">
+      <div className="w-full flex py-32 px-16 text-black bg-[#F5F5F5] h-full rounded-b-3xl mt-24">
         <div className="flex w-[30%] h-full flex-col gap-6">
-          <h1 className="text-4xl font-semibold text-white">
+          <h1 className="text-4xl font-semibold ">
             High-impact <br /> Services
           </h1>
-          <p className="text-white [#E1B6CA] text-sm font-light">
+          <p className=" [#E1B6CA] text-sm font-light">
             We assist public and private company clients in reaching their
             objectives through audit, tax, advisory, risk and performance
             services.
@@ -131,7 +132,7 @@ export default function Home() {
           <Button
             rightSection={<IconArrowRight size={20} />}
             variant="gradient"
-            gradient={{ deg: 133, from: "pink", to: "black" }}
+            bg={"#4169E1"}
             size="xl"
             radius="md"
             mt="xl"
@@ -226,10 +227,10 @@ export default function Home() {
         />
 
         <div className="w-[50%] pl-28 flex flex-col gap-10">
-          <h1 className="text-4xl text-black font-bold">
+          <h1 className="text-4xl text-[#F5F5F5] font-bold">
             The story behind our company
           </h1>
-          <p className="text-lg text-black/40 font-extralight">
+          <p className="text-lg text-white/40 font-extralight">
             At Hogg Anderson Business Solutions Limited, we specialize in
             providing expert accounting and business solutions tailored to the
             unique needs of the hospitality industry. With a strong focus on
@@ -240,7 +241,9 @@ export default function Home() {
             commitment to excellence in every service we offer. Let us be your
             trusted partner in optimizing your business for success.
           </p>
-          <button className="btn text-white">About our firm</button>
+          <button className="btn bg-[#4169E1] text-white">
+            About our firm
+          </button>
         </div>
       </div>
 

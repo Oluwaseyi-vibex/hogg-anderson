@@ -18,8 +18,8 @@ export default function GetInTouch() {
         <div
           className={classes.contacts}
           style={{
-            // backgroundImage: `url(/hero2.jpg)`
-            backgroundColor: "black",
+            // backgroundImage: `url(/hero2.jpg)`,
+            backgroundColor: "#4169E1",
           }}
         >
           <Text fz="lg" fw={700} className={`${classes.title}`} c="#fff">
@@ -30,10 +30,10 @@ export default function GetInTouch() {
         </div>
 
         <form
-          className={`${classes.form} bg-[#E1B6CA]/30`}
+          className={`${classes.form} bg-[#F5F5F5]`}
           onSubmit={(event) => event.preventDefault()}
         >
-          <Text fz="lg" fw={700} className={classes.title}>
+          <Text fz="xl" fw={700} className={classes.title}>
             Get in touch
           </Text>
 
@@ -60,7 +60,7 @@ export default function GetInTouch() {
               <Button
                 type="submit"
                 variant="gradient"
-                gradient={{ deg: 133, from: "pink", to: "black" }}
+                bg={"#4169E1"}
                 size="sm"
                 radius="sm"
                 justify="center"
