@@ -218,6 +218,7 @@ export default function Home() {
 
       <div className="w-full  mt-36 flex">
         <Image
+          alt=""
           src={"/aboutsection.jpg"}
           width={1000}
           height={1000}

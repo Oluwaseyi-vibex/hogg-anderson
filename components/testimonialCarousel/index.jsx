@@ -57,7 +57,7 @@ const TestimonialCarousel = () => {
       >
         {testimonials.map((testimonial, index) => (
           <div key={index} className="p-6 bg-white rounded shadow-md">
-            <p className="text-lg italic">"{testimonial.feedback}"</p>
+            <p className="text-lg italic">&quot;{testimonial.feedback}&quot;</p>
             <p className="mt-4 font-bold text-sm">{testimonial.name}</p>
             <p className="text-sm mb-6 text-gray-500">{testimonial.position}</p>
           </div>
