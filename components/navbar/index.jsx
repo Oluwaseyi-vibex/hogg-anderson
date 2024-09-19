@@ -78,10 +78,13 @@ const NavBar = () => {
           </li>
 
           <li>
-            <Link href="#">Industries</Link>
+            <Link href="#">Certification</Link>
           </li>
           <li>
-            <Link href="#">Our Team</Link>
+            <Link href="#">Blog</Link>
+          </li>
+          <li>
+            <Link href="#">Contact</Link>
           </li>
         </ul>
       </div>

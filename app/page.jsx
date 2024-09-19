@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
-import { inter } from "@/utils/font/fonts";
+import { inter, poppins } from "@/utils/font/fonts";
 import { ServicesCard } from "@/components";
 import { FeaturesTitle } from "@/components/features";
 import { Button } from "@mantine/core";
@@ -12,9 +12,9 @@ import TestimonialCarousel from "@/components/testimonialCarousel";
 
 export default function Home() {
   return (
-    <div className={`${inter.className} px-20 mt-14`}>
-      <main className="flex w-full items-center justify-between">
-        <div className="flex flex-col gap-3 w-fit">
+    <div className={`${poppins.className} w-full px-20 mt-10`}>
+      <main className="flex w-full items-center gap-4 justify-end">
+        <div className="flex flex-col gap-3 w-full">
           <p className="rounded-full shadow-md shadow-black cursor-pointer font-light border-white border-[0.5px] w-fit bg-transparent py-1 px-8 text-xs text-[#4169E1]">
             Hogg Anderson Business Solutions Limited
           </p>
@@ -49,33 +49,16 @@ export default function Home() {
           </Button>
         </div>
 
-        <div className="flex w-full gap-3 items-center justify-end">
+        <div className="flex w-full  items-center justify-end ">
           <Image
-            src="/hero2.jpg"
+            src="/hero.png"
             alt=""
             width={1000}
             height={1000}
-            className="w-[90%] rounded-xl"
+            className="w-[80%] rounded-xl"
           />
           {/* <div className="flex flex-col gap-2">
-            <div
-              style={{
-                backgroundImage: `url(/financial-accuracy.png)`,
-                backgroundRepeat: "no-repeat",
-                backgroundSize: "cover",
-              }}
-              className="group w-[300px]  border-2 border-black rounded-3xl text-white transition-all ease-in duration-300 flex flex-col justify-end text-3xl font-bold p-5 h-[200px]"
-            >
-              <div className="w-full group-hover:opacity-65 group-hover:rounded-md group-hover:h-[100px] transition-all ease-in duration-300 relative top-0 z-0 group-hover:bg-black">
-                <h1 className="relative z-10">
-                  Financial <br /> Accuracy
-                </h1>
-                <p className="group-hover:flex relative z-10 transition-all ease-in  text-xs text-white font-medium hidden">
-                  Ensuring your financial statements reflect the true value of
-                  your inventory.
-                </p>
-              </div>
-            </div>
+            
 
             <div
               style={{
@@ -144,18 +127,18 @@ export default function Home() {
         </div>
 
         <div className="w-[70%] flex flex-col gap-16 items-end h-full">
-          <div className="flex gap-8">
+          <div className="flex gap-12">
             <ServicesCard
-              img={"/invoice2.png"}
-              title={"Supplier Invoices Management"}
+              img={"/financial-accuracy.png"}
+              title={"Accounting Services"}
               imgWidth={`35%`}
               description={
-                "We meticulously handle supplier invoices, ensuring accuracy, proper recording, and timely reconciliation. Our process streamlines payables and minimizes errors."
+                "Whether you’re launching a startup or running an established business, Hogg Anderson Business Solutions Limited offers comprehensive bookkeeping and payroll solutions tailored to your needs. We provide..."
               }
             />
             <ServicesCard
-              img={"/file.png"}
-              title={"Regular Audits"}
+              img={"/cost-control.jpg"}
+              title={"Inventory Management System"}
               imgWidth={`35%`}
               description={
                 "Conduct regular physical inventory counts to ensure that your records match the actual stock levels."
@@ -163,54 +146,37 @@ export default function Home() {
             />
           </div>
 
-          <div className="flex gap-8">
+          <div className="flex gap-12">
             <ServicesCard
-              img={"/inventory.png"}
-              title={"Inventory Valuation at Month-End"}
+              img={"/office.jpg"}
+              title={"Sales Analytics"}
               imgWidth={"35%"}
               description={
                 "Our team expertly values closing inventory using industry-standard methods (e.g., weighted average, FIFO). This ensures precise financial reporting and compliance with accounting standards."
               }
             />
             <ServicesCard
-              img={"/analysis.png"}
-              title={"Variance Analysis and Reconciliation"}
+              img={"/person-office.jpg"}
+              title={"Accounting System"}
               description={
                 "Identifying and reconciling variances is crucial. We analyze discrepancies between actual and expected costs, providing actionable insights to improve efficiency."
               }
             />
           </div>
 
-          <div className="flex gap-8">
+          <div className="flex gap-12">
             <ServicesCard
-              img={"/monitoring.png"}
-              title={"Monitoring of Inventory Turnover"}
+              img={"/startup-colleagues-reviewing.jpg"}
+              title={"Business Advisory"}
               description={
                 "Keep an eye on your inventory turnover ratio to identify slow-moving items and make informed decisions about reordering and promotions."
               }
             />
             <ServicesCard
-              img={"/Stock_market-removebg-preview.png"}
-              title={"Stock Movement Reports"}
+              img={"/investor-confidence.jpg"}
+              title={"Training"}
               description={
                 "Our customized stock movement reports track inventory flow, highlight trends, and identify slow-moving items of food and beverages. This aids in inventory management and decision-making."
-              }
-            />
-          </div>
-
-          <div className="flex items-baseline gap-8">
-            <ServicesCard
-              img={"/training-removebg-preview.png"}
-              title={"Training Staff"}
-              description={
-                "Ensure that your staff is well-trained in inventory management procedures to maintain accuracy and efficiency."
-              }
-            />
-            <ServicesCard
-              img={"/foodmetrics.png"}
-              title={"Key Performance Metrics for Food and Beverages"}
-              description={
-                "We compute essential metrics, including: Food Cost Percentage, Beverage Cost Percentage, Cost of Sales."
               }
             />
           </div>

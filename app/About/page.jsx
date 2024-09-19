@@ -1,3 +1,8 @@
+"use client";
+import GetInTouch from "@/components/contact";
+import { ContactIconsList } from "@/components/contact/ContactIcons";
+import OurVision from "@/components/ourVision";
+import TestimonialCarousel from "@/components/testimonialCarousel";
 import { inter, poppins } from "@/utils/font/fonts";
 import {
   faArchive,
@@ -7,12 +12,27 @@ import {
   faShareSquare,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Button, List } from "@mantine/core";
+import {
+  IconArrowRightBar,
+  IconArrowRightCircle,
+  IconArrowRightCircleFilled,
+  IconCheck,
+  IconCommand,
+  IconListCheck,
+  IconMarkdown,
+  IconMarkdownOff,
+  IconMessage2Check,
+  IconPhoneEnd,
+  IconTicket,
+} from "@tabler/icons-react";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const About = () => {
   return (
-    <div className={`${poppins.className} h-full flex flex-col gap-8 py-16 `}>
+    <div className={`${poppins.className} h-full flex flex-col gap-8 pt-16 `}>
       <div className="px-24 flex  flex-col gap-12 h-full pb-24">
         <div className="flex items-center h-fit  gap-4 text-md text-[#F5F5F5]/60">
           <FontAwesomeIcon
@@ -45,7 +65,7 @@ const About = () => {
       </div>
 
       <div className="h-full w-full flex py-24 px-12 justify-between bg-[#F5F5F5]">
-        <div className="w-full flex items-center justify-center">
+        <div className="w-full flex items-start justify-center">
           <Image
             src={"/aboutPage.png"}
             alt=""
@@ -87,19 +107,128 @@ const About = () => {
               Our Team
             </button>
           </div>
+
           <p>
-            Our expert team combines deep industry knowledge with cutting-edge
-            technology to deliver innovative solutions, helping our clients
-            achieve financial stability and growth. At Hogg Anderson, we pride
-            ourselves on being a strategic partner, dedicated to the long-term
-            success of our clients through precision, transparency, and
-            expertise.
+            At Hogg Anderson Business Solutions Limited, we don’t just crunch
+            numbers—we empower your business to reach new heights. Our mission
+            is to be an integral part of your growth journey, serving as the
+            driving force behind your success. We’re not just accountants; we’re
+            business enthusiasts with a passion for seeing brands thrive.
           </p>
 
-          <button className="font-normal btn rounded-sm h-fit min-h-fit py-4 hover:text-[#333333] hover:bg-[#E8E8E8] bg-[#333333] border-none text-white text-lg px-6">
-            Learn More
-          </button>
+          <div className="flex flex-col gap-3">
+            <h1 className="text-2xl font-medium">
+              Your Preferred and Trusted Business Advisor
+            </h1>
+            <p>
+              As your go-to business advisor, we offer much more than
+              traditional accounting services. We help you:
+            </p>
+            <List icon={<IconCheck />} className="list-disc">
+              <List.Item>
+                Maintain an organized, streamlined accounting system
+              </List.Item>
+              <List.Item>
+                Gain valuable insights into your business performance for
+                informed financial decisions
+              </List.Item>
+              <List.Item>
+                Reduce tax liabilities and stay compliant with regulations
+              </List.Item>
+              <List.Item>
+                Access alternative funding solutions to grow your business
+              </List.Item>
+              <List.Item>
+                Save money, cut costs, and enhanceli li profit margins
+              </List.Item>
+              <List.Item>
+                Receive expert advice with free professional consultations
+              </List.Item>
+              <List.Item>
+                Purchase services on a flexible pay-as-you-go basis
+              </List.Item>
+            </List>
+          </div>
+
+          <div className="flex flex-col gap-3">
+            <h1 className="text-2xl font-medium">Who We Work With</h1>
+            <p>We proudly support a wide range of businesses, including:</p>
+            <List icon={<IconCheck />} className="list-disc">
+              <List.Item>
+                Owner-managed businesses (Sole Proprietors, Partnerships,
+                Limited Liability Companies)
+              </List.Item>
+              <List.Item>Expatriates running local businesses</List.Item>
+              <List.Item>Professional associations and groups</List.Item>
+            </List>
+          </div>
+
+          <div className="flex flex-col gap-3">
+            <h1 className="text-2xl font-medium">
+              Specialist Industry Expertise
+            </h1>
+            <p>
+              While we work with all types of businesses, we have significant
+              expertise in:
+            </p>
+            <List icon={<IconCheck />} className="list-disc">
+              <List.Item>Hospitality (Restaurants, Lounges, Hotels)</List.Item>
+              <List.Item>Real Estate</List.Item>
+              <List.Item>Transportation </List.Item>
+              <List.Item>Information Technology</List.Item>
+              <List.Item>Trading & Distribution</List.Item>
+              <List.Item>Professional Services</List.Item>
+              <List.Item>Small & Medium Enterprises (SMEs)</List.Item>
+            </List>
+          </div>
+
+          <div className="flex flex-col gap-3">
+            <h1 className="text-2xl  font-medium">
+              Nigeria’s Leading Business Advisor for Hospitality and Beyond
+            </h1>
+            <p>
+              Since our inception, Hogg Anderson has become the go-to provider
+              of accounting, taxation, and business advisory services for the
+              hospitality industry in Nigeria. We offer deep technical knowledge
+              and hands-on experience, providing tailored solutions that fit the
+              specific needs of each client, no matter their size or location.
+            </p>
+
+            <p>
+              At Hogg Anderson, we go beyond just providing services—our
+              priority is always client satisfaction. By leveraging the latest
+              technology and the expertise of our dedicated professionals, we
+              strive to exceed your expectations and be your trusted partner in
+              business success.
+            </p>
+          </div>
+
+          <div className="flex flex-col gap-3">
+            <h1 className="text-2xl font-medium">Our Commitment</h1>
+            <p>
+              We are committed to acting as a force for integrity and sound
+              business practices. Guided by a promise to always do what’s right
+              for our clients, people, and community, we deliver wise,
+              actionable solutions to the challenges your business faces.
+            </p>
+          </div>
+          <p>
+            <Link className="italic underline text-[#4169e1]" href={"#"}>
+              Book a consultation
+            </Link>{" "}
+            with our team today and let’s discuss how we can help your business
+            grow.
+          </p>
         </div>
+      </div>
+
+      <TestimonialCarousel />
+      <div className="flex justify-around w-full h-fit p-8 bg-[#F5F5F5] items-center">
+        <h1 className="text-xl font-semibold">
+          Get Started - See why our clients stay with us year after year.
+        </h1>
+
+        <Button rightSection={<IconArrowRightCircle />}>Contact Us</Button>
       </div>
     </div>
   );
