@@ -1,9 +1,8 @@
 "use client";
-import { HeroImageBackground } from "@/components/hero";
 import { Colors } from "@/utils/font/color";
 import { poppins } from "@/utils/font/fonts";
 import { Button, Image, List } from "@mantine/core";
-import { IconCheck, IconCheckbox } from "@tabler/icons-react";
+import { IconCheckbox } from "@tabler/icons-react";
 import Link from "next/link";
 import React from "react";
 
@@ -45,7 +44,7 @@ const AccountingServices = () => {
           className={`flex flex-col gap-3 text-sm w-[70%] text-[${Colors.white}]/60 `}
         >
           <p>
-            Whether you're launching a startup in need of small business
+            Whether you&apos;re launching a startup in need of small business
             bookkeeping services or managing an established business, Hogg
             Anderson Business Solutions Limited offers seamless bookkeeping and
             payroll solutions tailored to your needs.

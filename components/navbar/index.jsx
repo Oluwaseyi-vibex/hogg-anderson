@@ -64,7 +64,23 @@ const NavBar = () => {
             <Link href="/About">About</Link>
           </li>
           <li>
-            <details>
+            <div className="dropdown dropdown-bottom dropdown-end dropdown-hover">
+              <div tabIndex={0} role="button" className="">
+                Services
+              </div>
+              <ul
+                tabIndex={0}
+                className="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow"
+              >
+                <li>
+                  <a>Item 1</a>
+                </li>
+                <li>
+                  <a>Item 2</a>
+                </li>
+              </ul>
+            </div>
+            {/* <details>
               <summary>Services</summary>
               <ul className="p-4 menu menu-vertical text-xs ">
                 <li>
@@ -74,7 +90,10 @@ const NavBar = () => {
                 </li>
 
                 <li className="w-full">
-                  <Link className="w-[230px]" href={"#"}>
+                  <Link
+                    href={"/Services/Inventory-Management-System"}
+                    className="w-[230px]"
+                  >
                     Inventory Management System
                   </Link>
                 </li>
@@ -100,7 +119,7 @@ const NavBar = () => {
                   </Link>
                 </li>
               </ul>
-            </details>
+            </details> */}
           </li>
 
           <li>
