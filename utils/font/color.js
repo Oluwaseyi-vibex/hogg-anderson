@@ -1,5 +1,6 @@
 export const Colors = {
-  primary: "#0E1628",
-  appBg: "#FFFFFF",
+  bg: "#333333",
+  white: "#F5F5F5",
   blue: "#4169e1",
+  orange: "#FFCC99",
 };

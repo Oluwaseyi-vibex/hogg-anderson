@@ -1,13 +1,13 @@
 import React from "react";
 import Link from "next/link";
-import { lexendPeta } from "@/utils/font/fonts";
+import { lexendPeta, poppins } from "@/utils/font/fonts";
 import { Button } from "@mantine/core";
 import { IconArrowRight } from "@tabler/icons-react";
 
 const NavBar = () => {
   return (
     <div
-      className={`${lexendPeta.className} sticky top-0 z-50 w-full  flex items-center justify-center navbar font-semibold  p-5  bg-[#333333] text-[#F5F5F5]`}
+      className={`${poppins.className} sticky top-0 z-50 w-full  flex items-center justify-center navbar font-semibold  p-5  bg-[#333333] text-[#F5F5F5]`}
     >
       <div className="navbar-start">
         <div className="dropdown">
@@ -56,7 +56,7 @@ const NavBar = () => {
         <a className="btn btn-ghost text-xl">Logo</a>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal text-md px-1">
+        <ul className="menu menu-horizontal text-base px-1">
           <li>
             <Link href="/">Home</Link>
           </li>
@@ -66,12 +66,38 @@ const NavBar = () => {
           <li>
             <details>
               <summary>Services</summary>
-              <ul className="p-2">
+              <ul className="p-4 menu menu-vertical text-xs ">
                 <li>
-                  <Link href="#">Submenu 1</Link>
+                  <Link href={"/Services/Accounting-Services"}>
+                    Accounting Services
+                  </Link>
                 </li>
-                <li>
-                  <Link href="#">Submenu 2</Link>
+
+                <li className="w-full">
+                  <Link className="w-[230px]" href={"#"}>
+                    Inventory Management System
+                  </Link>
+                </li>
+
+                <li className="w-full">
+                  <Link className="w-[230px]" href={"#"}>
+                    Sales Analytics
+                  </Link>
+                </li>
+                <li className="w-full">
+                  <Link className="w-[230px]" href={"#"}>
+                    Accounting System
+                  </Link>
+                </li>
+                <li className="w-full">
+                  <Link className="w-[230px]" href={"#"}>
+                    Business Advisory
+                  </Link>
+                </li>
+                <li className="w-full">
+                  <Link className="w-[230px]" href={"#"}>
+                    Training
+                  </Link>
                 </li>
               </ul>
             </details>
