@@ -70,56 +70,35 @@ const NavBar = () => {
               </div>
               <ul
                 tabIndex={0}
-                className="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow"
+                className="dropdown-content menu bg-base-100 rounded-box z-[1] w-56 p-2 shadow"
               >
-                <li>
-                  <a>Item 1</a>
-                </li>
-                <li>
-                  <a>Item 2</a>
-                </li>
-              </ul>
-            </div>
-            {/* <details>
-              <summary>Services</summary>
-              <ul className="p-4 menu menu-vertical text-xs ">
                 <li>
                   <Link href={"/Services/Accounting-Services"}>
                     Accounting Services
-                  </Link>
+                  </Link>{" "}
                 </li>
-
-                <li className="w-full">
-                  <Link
-                    href={"/Services/Inventory-Management-System"}
-                    className="w-[230px]"
-                  >
+                <li>
+                  <Link href={"/Services/Inventory-Management-System"}>
                     Inventory Management System
                   </Link>
                 </li>
-
-                <li className="w-full">
-                  <Link className="w-[230px]" href={"#"}>
-                    Sales Analytics
-                  </Link>
+                <li>
+                  <Link href={"#"}>Sales Analytics</Link>
                 </li>
                 <li className="w-full">
-                  <Link className="w-[230px]" href={"#"}>
-                    Accounting System
-                  </Link>
+                  <Link href={"#"}>Accounting System</Link>
                 </li>
                 <li className="w-full">
-                  <Link className="w-[230px]" href={"#"}>
-                    Business Advisory
-                  </Link>
+                  <Link href={"#"}>Accounting System</Link>
                 </li>
                 <li className="w-full">
-                  <Link className="w-[230px]" href={"#"}>
-                    Training
-                  </Link>
+                  <Link href={"#"}>Business Advisory</Link>
+                </li>
+                <li className="w-full">
+                  <Link href={"#"}>Training</Link>
                 </li>
               </ul>
-            </details> */}
+            </div>
           </li>
 
           <li>
