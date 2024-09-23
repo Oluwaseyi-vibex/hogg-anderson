@@ -1,40 +1,32 @@
-import cx from "clsx";
-import { Title, Text, Container, Button, Overlay } from "@mantine/core";
-import classes from "./HeroImageBackground.module.css";
+"use client";
+import { Overlay, Container, Title, Button, Text } from "@mantine/core";
+import classes from "./HeroContentLeft.module.css";
 
-export function HeroImageBackground() {
+export function HeroContentLeft() {
   return (
-    <div className={classes.wrapper}>
-      <Overlay color="#000" opacity={0.65} zIndex={1} />
+    <div className={classes.hero}>
+      <Overlay
+        gradient="linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, .65) 40%)"
+        opacity={1}
+        zIndex={0}
+      />
+      <Container className={classes.container} size="md">
+        <Title className={classes.title}>Blog </Title>
+        <Text className={classes.description} size="xl" mt="xl">
+          Build fully functional accessible web applications faster than ever –
+          Mantine includes more than 120 customizable components and hooks to
+          cover you in any situation
+        </Text>
 
-      <div className={classes.inner}>
-        <Title className={classes.title}>
-          Automated AI code reviews for{" "}
-          <Text component="span" inherit className={classes.highlight}>
-            any stack
-          </Text>
-        </Title>
-
-        <Container size={640}>
-          <Text size="lg" className={classes.description}>
-            Build more reliable software with AI companion. AI is also trained
-            to detect lazy developers who do nothing and just complain on
-            Twitter.
-          </Text>
-        </Container>
-
-        <div className={classes.controls}>
-          <Button className={classes.control} variant="white" size="lg">
-            Get started
-          </Button>
-          <Button
-            className={cx(classes.control, classes.secondaryControl)}
-            size="lg"
-          >
-            Live demo
-          </Button>
-        </div>
-      </div>
+        <Button
+          variant="gradient"
+          size="xl"
+          radius="xl"
+          className={classes.control}
+        >
+          Get started
+        </Button>
+      </Container>
     </div>
   );
 }

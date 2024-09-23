@@ -21,7 +21,7 @@ const AccountingServices = () => {
         </Link>
       </div>
       <div className="my-5 w-full flex   gap-7">
-        <Image src={"/manwith-laptop.jpg"} w={"800px"} className="w-[800px]" />
+        <Image alt="" src={"/financial-accuracy.png"} w={"500px"} h={"400px"} />
         <div
           className={`p-8 h-fit w-fit flex flex-col gap-3 text-[${Colors.white}] bg-[${Colors.blue}]`}
         >

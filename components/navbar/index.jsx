@@ -75,7 +75,7 @@ const NavBar = () => {
                 <li>
                   <Link href={"/Services/Accounting-Services"}>
                     Accounting Services
-                  </Link>{" "}
+                  </Link>
                 </li>
                 <li>
                   <Link href={"/Services/Inventory-Management-System"}>
@@ -83,19 +83,23 @@ const NavBar = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link href={"#"}>Sales Analytics</Link>
+                  <Link href={"/Services/Sales-Analytics"}>
+                    Sales Analytics
+                  </Link>
                 </li>
                 <li className="w-full">
-                  <Link href={"#"}>Accounting System</Link>
+                  <Link href={"/Services/Accounting-System"}>
+                    Accounting System
+                  </Link>
+                </li>
+
+                <li className="w-full">
+                  <Link href={"/Services/Business-Advisory"}>
+                    Business Advisory
+                  </Link>
                 </li>
                 <li className="w-full">
-                  <Link href={"#"}>Accounting System</Link>
-                </li>
-                <li className="w-full">
-                  <Link href={"#"}>Business Advisory</Link>
-                </li>
-                <li className="w-full">
-                  <Link href={"#"}>Training</Link>
+                  <Link href={"/Services/Training"}>Training</Link>
                 </li>
               </ul>
             </div>
@@ -105,7 +109,7 @@ const NavBar = () => {
             <Link href="#">Certification</Link>
           </li>
           <li>
-            <Link href="#">Blog</Link>
+            <Link href="/Blog">Blog</Link>
           </li>
           <li>
             <Link href="#">Contact</Link>

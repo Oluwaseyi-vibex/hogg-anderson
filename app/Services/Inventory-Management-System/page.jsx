@@ -22,10 +22,10 @@ const InventoryManagementServices = () => {
       </div>
       <div className="my-5 w-full flex   gap-7">
         <Image
-          src={"/manwith-laptop.jpg"}
-          w={"800px"}
+          src={"/cost-control.jpg"}
+          // w={"800px"}
           alt=""
-          className="w-[800px]"
+          // className="w-[900px]"
         />
         <div
           className={`p-8 h-fit w-fit flex flex-col gap-3 text-[${Colors.white}] bg-[${Colors.blue}]`}
@@ -40,7 +40,7 @@ const InventoryManagementServices = () => {
 
       <div>
         <h1 className={`text-[${Colors.blue}] font-medium text-4xl mt-10`}>
-          Comprehensive Accounting Services
+          Efficient Inventory Management Solutions
         </h1>
 
         <div className={`h-1 w-20 my-6 bg-[${Colors.orange}]`}></div>
@@ -49,24 +49,25 @@ const InventoryManagementServices = () => {
           className={`flex flex-col gap-3 text-sm w-[70%] text-[${Colors.white}]/60 `}
         >
           <p>
-            Whether you&apos;re launching a startup in need of small business
-            bookkeeping services or managing an established business, Hogg
-            Anderson Business Solutions Limited offers seamless bookkeeping and
-            payroll solutions tailored to your needs.
+            Whether you&apos;re a startup or an established business in the
+            hospitality industry, Hogg Anderson Business Solutions Limited
+            provides comprehensive inventory management solutions tailored to
+            your needs.
           </p>
 
           <p>
-            We provide easy access to highly qualified and experienced
-            accounting professionals—without the need for you to hire full-time
-            staff.
+            We give you access to experienced professionals who can help you
+            streamline your inventory processes—without the need to hire
+            full-time staff. From managing stock levels to implementing best
+            practices, our inventory solutions are designed to enhance
+            efficiency and reduce operational costs.
           </p>
 
           <p>
-            Even if your in-house bookkeeper is struggling to keep up with your
-            growing business demands, we can step in with efficient,
-            cost-effective support to keep your financial processes on track.
-            Our cloud-based, online bookkeeping services are designed to help
-            you reduce costs and manage your books efficiently.
+            Even if your current in-house system isn&apos;t keeping up with your
+            business demands, we can step in to provide efficient support,
+            ensuring you maintain accurate records and optimize inventory
+            control at cost-effective rates.
           </p>
         </div>
 
@@ -76,40 +77,51 @@ const InventoryManagementServices = () => {
           <h1
             className={`text-[${Colors.blue}] font-medium text-2xl mt-10 mb-2`}
           >
-            Streamlined Accounting with Cloud Technology
+            Revolutionizing Inventory Management with Technology
           </h1>
           <p>
-            Our cloud-based accounting solutions revolutionize the way you
-            manage your financial data. The built-in efficiencies allow you and
-            your advisors to focus more on strategies that drive profitability
-            and business growth.
+            Our cloud-based, real-time inventory management solutions provide
+            full visibility into your stock levels, allowing you to make smarter
+            purchasing decisions, minimize waste, and improve overall
+            profitability.
           </p>
         </div>
 
         <div className="flex flex-col gap-3 my-4">
           <p className={`text-sm text-[${Colors.blue}]`}>
-            Our Accounting Services Include:
+            Our Inventory Management Services Include:
           </p>
           <List
             className={`text-[${Colors.white}]/60 text-base `}
             icon={<IconCheckbox size={"17px"} />}
             size="sm"
           >
-            <List.Item>Monthly and periodical financial reporting</List.Item>
-            <List.Item>Payroll management</List.Item>
-            <List.Item>Analytics and KPI reporting</List.Item>
             <List.Item>
-              Financial forecasting, cash flow, and budget preparation
+              Regular physical inventory counts and reconciliation
+            </List.Item>
+            <List.Item>Real-time stock movement tracking and reports</List.Item>
+            <List.Item>
+              Monthly inventory valuation and variance analysis
             </List.Item>
             <List.Item>
-              Supervision and training of in-house accounting staff
+              Cost control strategies for food and beverage operations
+            </List.Item>
+            <List.Item>
+              Analytics and key performance metrics for inventory turnover
+            </List.Item>
+            <List.Item>
+              Custom reporting to identify slow-moving stock and optimize
+              reordering
+            </List.Item>
+            <List.Item>
+              Staff training on inventory management procedures
             </List.Item>
           </List>
           <p className={`text-[#FFCC99] text-base `}>
-            As your business grows, you may require more in-depth financial
-            analysis by cost center. We provide this added level of insight at
-            no extra cost, ensuring your business continues to thrive with
-            well-informed decisions.
+            As your business expands, you may require more detailed analysis and
+            reporting on your inventory. We provide this level of insight
+            without any additional cost, ensuring your inventory management
+            scales with your business.
           </p>
         </div>
       </div>
