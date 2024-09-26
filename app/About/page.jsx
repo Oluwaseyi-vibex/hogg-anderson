@@ -223,13 +223,6 @@ const About = () => {
       </div>
 
       <TestimonialCarousel />
-      <div className="flex justify-around w-full h-fit p-8 bg-[#F5F5F5] items-center">
-        <h1 className="text-xl font-semibold">
-          Get Started - See why our clients stay with us year after year.
-        </h1>
-
-        <Button rightSection={<IconArrowRightCircle />}>Contact Us</Button>
-      </div>
     </div>
   );
 };

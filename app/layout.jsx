@@ -2,7 +2,8 @@ import { Footer, NavBar } from "@/components";
 import "./globals.css";
 import "@mantine/core/styles.css";
 
-import { MantineProvider } from "@mantine/core";
+import { Button, MantineProvider } from "@mantine/core";
+import { IconArrowRightCircle } from "@tabler/icons-react";
 
 export const metadata = {
   title: "Hogg Anderson",
@@ -17,6 +18,13 @@ export default function RootLayout({ children }) {
         <MantineProvider>
           <NavBar />
           {children}
+          <div className="flex justify-around w-full h-fit p-8 bg-[#F5F5F5] items-center">
+            <h1 className="text-xl font-semibold">
+              Get Started - See why our clients stay with us year after year.
+            </h1>
+
+            <Button rightSection={<IconArrowRightCircle />}>Contact Us</Button>
+          </div>
           <Footer />
         </MantineProvider>
       </body>

@@ -1,11 +1,11 @@
 "use client";
-import Image from "next/image";
+// import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
 import { inter, poppins } from "@/utils/font/fonts";
 import { ServicesCard } from "@/components";
 import { FeaturesTitle } from "@/components/features";
-import { Button } from "@mantine/core";
+import { Button, Image } from "@mantine/core";
 import { IconArrowRight, IconSignRight } from "@tabler/icons-react";
 import GetInTouch from "@/components/contact";
 import TestimonialCarousel from "@/components/testimonialCarousel";
@@ -13,7 +13,7 @@ import TestimonialCarousel from "@/components/testimonialCarousel";
 export default function Home() {
   return (
     <div className={`${poppins.className} w-full px-20 mt-10`}>
-      <main className="flex w-full items-center gap-4 justify-end">
+      <main className="flex w-full items-start gap-4 justify-end">
         <div className="flex flex-col gap-3 w-full">
           <p className="rounded-full shadow-md shadow-black cursor-pointer font-light border-white border-[0.5px] w-fit bg-transparent py-1 px-8 text-xs text-[#4169E1]">
             Hogg Anderson Business Solutions Limited
@@ -50,13 +50,7 @@ export default function Home() {
         </div>
 
         <div className="flex w-full  items-center justify-end ">
-          <Image
-            src="/hero.png"
-            alt=""
-            width={1000}
-            height={1000}
-            className="w-[80%] rounded-xl"
-          />
+          <Image src="/hero.png" alt="" w={900} className="w-[60%]" />
           {/* <div className="flex flex-col gap-2">
             
 
@@ -187,9 +181,9 @@ export default function Home() {
         <Image
           alt=""
           src={"/aboutsection.jpg"}
-          width={1000}
-          height={1000}
-          className="w-[60%] rounded-xl"
+          w={800}
+          h={550}
+          className="w-[30%] rounded-xl"
         />
 
         <div className="w-[50%] pl-28 flex flex-col gap-10">
