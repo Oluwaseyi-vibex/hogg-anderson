@@ -7,7 +7,7 @@ import { IconArrowRight } from "@tabler/icons-react";
 const NavBar = () => {
   return (
     <div
-      className={`${poppins.className} sticky top-0 z-50 w-full  flex items-center justify-center navbar font-semibold  p-5  bg-[#333333] text-[#F5F5F5]`}
+      className={`${poppins.className} sticky top-0 z-50 w-full px-16  flex items-center justify-center navbar font-semibold  py-5  bg-[#333333] text-[#F5F5F5]`}
     >
       <div className="navbar-start">
         <div className="dropdown">
@@ -106,13 +106,13 @@ const NavBar = () => {
           </li>
 
           <li>
-            <Link href="#">Certification</Link>
+            <Link href="#">Courses</Link>
           </li>
           <li>
             <Link href="/Blog">Blog</Link>
           </li>
           <li>
-            <Link href="#">Contact</Link>
+            <Link href="/getInTouch">Contact</Link>
           </li>
         </ul>
       </div>

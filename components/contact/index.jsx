@@ -18,15 +18,15 @@ export default function GetInTouch() {
         <div
           className={classes.contacts}
           style={{
-            // backgroundImage: `url(/hero2.jpg)`,
+            backgroundImage: `url(/hero2.jpg)`,
             backgroundColor: "#4169E1",
           }}
         >
-          <Text fz="lg" fw={700} className={`${classes.title}`} c="#fff">
+          {/* <Text fz="lg" fw={700} className={`${classes.title}`} c="#fff">
             Contact information
-          </Text>
+          </Text> */}
 
-          <ContactIconsList />
+          {/* <ContactIconsList /> */}
         </div>
 
         <form

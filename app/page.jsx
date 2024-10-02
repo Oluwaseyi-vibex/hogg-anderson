@@ -1,21 +1,21 @@
 "use client";
-// import Image from "next/image";
+import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
 import { inter, poppins } from "@/utils/font/fonts";
 import { ServicesCard } from "@/components";
 import { FeaturesTitle } from "@/components/features";
-import { Button, Image } from "@mantine/core";
+import { Button } from "@mantine/core";
 import { IconArrowRight, IconSignRight } from "@tabler/icons-react";
 import GetInTouch from "@/components/contact";
 import TestimonialCarousel from "@/components/testimonialCarousel";
 
 export default function Home() {
   return (
-    <div className={`${poppins.className} w-full px-20 mt-10`}>
-      <main className="flex w-full items-start gap-4 justify-end">
+    <div className={`${poppins.className} w-full px-20 mt-14`}>
+      <main className="flex w-full items-start  justify-end">
         <div className="flex flex-col gap-3 w-full">
-          <p className="rounded-full shadow-md shadow-black cursor-pointer font-light border-white border-[0.5px] w-fit bg-transparent py-1 px-8 text-xs text-[#4169E1]">
+          <p className="rounded-full shadow-md shadow-black cursor-pointer font-light border-white border-[0.5px] w-fit bg-transparent py-1 px-8 text-sm text-[#4169E1]">
             Hogg Anderson Business Solutions Limited
           </p>
           <h1 className="text-[70px] text-[#F5F5F5] leading-tight font-semibold ">
@@ -28,7 +28,7 @@ export default function Home() {
             </div>
             Solutions.
           </h1>
-          <p className="text-sm text-[#F5F5F5]/40 w-[500px]">
+          <p className="text-sm text-[#F5F5F5]/40 w-[550px]">
             A trusted accounting and business solutions firm specializing in
             inventory management outsourcing restaurants, lounge and hotel and
             others in hospitality industry. And extensive expertise to optimize
@@ -49,8 +49,14 @@ export default function Home() {
           </Button>
         </div>
 
-        <div className="flex w-full  items-center justify-end ">
-          <Image src="/hero.png" alt="" w={900} className="w-[60%]" />
+        <div className="flex w-full  items-center justify-center ">
+          <Image
+            src="/hero.png"
+            alt=""
+            width={1000}
+            height={800}
+            className="w-[70%]"
+          />
           {/* <div className="flex flex-col gap-2">
             
 
@@ -181,9 +187,9 @@ export default function Home() {
         <Image
           alt=""
           src={"/aboutsection.jpg"}
-          w={800}
-          h={550}
-          className="w-[30%] rounded-xl"
+          width={400}
+          height={150}
+          className="w-[20%] h-[60%] rounded-xl"
         />
 
         <div className="w-[50%] pl-28 flex flex-col gap-10">
