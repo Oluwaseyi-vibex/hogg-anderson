@@ -55,8 +55,9 @@ const FAQSection = () => {
           <Accordion.Panel>
             We aim to respond to all inquiries within 24 hours on business days.
             For more complex requests, like detailed consultations or project
-            discussions, it may take up to 48 hours. If you haven't received a
-            response, please check your spam folder or give us a call.
+            discussions, it may take up to 48 hours. If you haven&apos;t
+            received a response, please check your spam folder or give us a
+            call.
           </Accordion.Panel>
         </Accordion.Item>
 
