@@ -106,7 +106,7 @@ const NavBar = () => {
           </li>
 
           <li>
-            <Link href="#">Courses</Link>
+            <Link href="#">Academy</Link>
           </li>
           <li>
             <Link href="/Blog">Blog</Link>
