@@ -97,7 +97,7 @@ const FAQSection = () => {
         className="flex items-center gap-5 justify-center"
         mt="lg"
       >
-        <p> Didn’t find what you were looking for? </p>{" "}
+        <p> Didn&apos;t find what you were looking for? </p>{" "}
         <Button
           component="a"
           //   href="/contact"
