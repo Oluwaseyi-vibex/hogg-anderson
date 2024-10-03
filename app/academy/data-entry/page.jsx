@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const DataEntryAcademyPage = () => {
@@ -33,7 +34,7 @@ const DataEntryAcademyPage = () => {
             </h2>
             <p className="text-lg mb-6">
               Data-Entry Academy is a 30-day online school that teaches the
-              software and skills needed for any workplace. Whether you're
+              software and skills needed for any workplace. Whether you&apos;re
               looking to improve your business, freelance, or grow your career,
               this academy covers essential tools like Microsoft, Google,
               Bookkeeping, Cloud storage, and Project Management, plus various
@@ -50,12 +51,14 @@ const DataEntryAcademyPage = () => {
               <li>Full-time Employees – Perform better in the workplace</li>
               <li>Job Seekers and Students – Become more employable</li>
               <li>
-                People Looking to Upskill – Stay relevant in today's world
+                People Looking to Upskill – Stay relevant in today&apos;s world
               </li>
             </ul>
           </div>
           <div className="lg:w-1/2 mt-8 lg:mt-0 lg:pl-12">
-            <img
+            <Image
+              width={1000}
+              height={1000}
               src="/data-entry-skills.jpg"
               alt="Data Entry Skills"
               className="rounded-lg shadow-lg"
@@ -97,7 +100,7 @@ const DataEntryAcademyPage = () => {
       <section className="py-16 px-6 lg:px-20 bg-white">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-semibold text-center mb-10">
-            What You'll Learn
+            What You&apos;ll Learn
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             <div>
