@@ -106,7 +106,40 @@ const NavBar = () => {
           </li>
 
           <li>
-            <Link href="#">Academy</Link>
+            <div className="dropdown dropdown-bottom dropdown-end dropdown-hover">
+              <div tabIndex={0} role="button" className="">
+                Academy
+              </div>
+              <ul
+                tabIndex={0}
+                className="dropdown-content menu bg-base-100 rounded-box z-[1] w-56 p-2 shadow"
+              >
+                <li>
+                  <Link href={"/academy/data-entry"}>Data Entry Academy</Link>
+                </li>
+                <li>
+                  <Link href={"/Services/Inventory-Management-System"}>
+                    Accounting Software Training
+                  </Link>
+                </li>
+                <li>
+                  <Link href={"/Services/Sales-Analytics"}>
+                    Property Mgt. System in Hotels
+                  </Link>
+                </li>
+                <li className="w-full">
+                  <Link href={"/Services/Accounting-System"}>
+                    Diploma in Hospitality Accounting
+                  </Link>
+                </li>
+
+                <li className="w-full">
+                  <Link href={"/Services/Business-Advisory"}>
+                    Adv. Diploma in Hospitality Accounting
+                  </Link>
+                </li>
+              </ul>
+            </div>
           </li>
           <li>
             <Link href="/Blog">Blog</Link>

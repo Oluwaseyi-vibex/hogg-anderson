@@ -29,10 +29,10 @@ export default function Home() {
             Solutions.
           </h1>
           <p className="text-sm text-[#F5F5F5]/40 w-[550px]">
-            A trusted accounting and business solutions firm specializing in
-            inventory management outsourcing restaurants, lounge and hotel and
-            others in hospitality industry. And extensive expertise to optimize
-            your financial processes and enhance profitability.
+            At Hogg Anderson Business Solutions, we provide expert accounting
+            services, inventory management systems, and implementation of
+            accounting software to streamline your business operations. Our
+            business advisory services offer strategic guidance to drive growth.
           </p>
           <Button
             rightSection={<IconArrowRight size={20} />}
@@ -152,7 +152,7 @@ export default function Home() {
               title={"Sales Analytics"}
               imgWidth={"35%"}
               description={
-                "Our team expertly values closing inventory using industry-standard methods (e.g., weighted average, FIFO). This ensures precise financial reporting and compliance with accounting standards."
+                "Our sales analytics service aims to empower restaurants by providing actionable insights based on weekly sales data. By identifying top-selling items and underperforming products, we enable informed decision-making and strategic planning."
               }
             />
             <ServicesCard
@@ -187,9 +187,9 @@ export default function Home() {
         <Image
           alt=""
           src={"/aboutsection.jpg"}
-          width={400}
+          width={1000}
           height={150}
-          className="w-[20%] h-[60%] rounded-xl"
+          className="w-[50%] h-[60%] rounded-xl"
         />
 
         <div className="w-[50%] pl-28 flex flex-col gap-10">

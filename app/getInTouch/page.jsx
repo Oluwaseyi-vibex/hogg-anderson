@@ -1,27 +1,36 @@
-import GetInTouch from "@/components/contact";
-import FAQSection from "@/components/faq";
+"use client";
+import dynamic from "next/dynamic";
+import { useEffect, useState } from "react";
 import { poppins } from "@/utils/font/fonts";
-import React from "react";
+
+// Dynamically import components to prevent server-side rendering issues
+const GetInTouch = dynamic(() => import("@/components/contact"), {
+  ssr: false,
+});
+const FAQSection = dynamic(() => import("@/components/faq"), { ssr: false });
 
 const GetIntouch = () => {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    // This ensures components relying on browser-specific features are only rendered on the client
+    setIsClient(true);
+  }, []);
+
   return (
-    <div className={`${poppins.className}  `}>
+    <div className={`${poppins.className}`}>
       <div
-        style={{
-          backgroundImage: `url(/contactPageBg.jpg)`,
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
-        }}
-        className="w-full  h-[400px] text-[#333333] flex flex-col gap-3 items-center justify-center"
+        className="w-full h-[400px] text-[#333333] flex flex-col gap-3 items-center justify-center bg-cover bg-no-repeat"
+        style={{ backgroundImage: `url(/contactPageBg.jpg)` }}
       >
-        <h1 className="text-5xl font-medium ">Get in Touch with Us</h1>
+        <h1 className="text-5xl font-medium">Get in Touch with Us</h1>
         <p className="text-lg text-[#F5F5F5]">
           We’re here to help your business thrive.
         </p>
       </div>
 
-      <div className="w-full flex flex-col gap-8 py-8 px-20  h-full">
-        <h1 className="text-3xl text-[#F5F5F5] font-semibold ">
+      <div className="w-full flex flex-col gap-8 py-8 px-20 h-full">
+        <h1 className="text-3xl text-[#F5F5F5] font-semibold">
           Our Contact Information
         </h1>
         <div className="flex items-center gap-3">
@@ -54,20 +63,22 @@ const GetIntouch = () => {
               </div>
             </div>
           </div>
-          <div className="w-[80%]">
-            <iframe
-              width="100%"
-              height="400"
-              frameborder="0"
-              scrolling="no"
-              marginheight="0"
-              marginwidth="0"
-              src="https://maps.google.com/maps?width=100%25&amp;height=400&amp;hl=en&amp;q=11,%20Ogundiaro%20Street,%20Oworon%E1%B9%A3oki,%20Nigeria+(Hogg%20Anderson)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
-            >
-              {/* <a href="https://www.gps.ie/">gps tracker sport</a> */}
-            </iframe>
-          </div>
+
+          {isClient && (
+            <div className="w-[80%]">
+              <iframe
+                width="100%"
+                height="400"
+                frameBorder="0"
+                scrolling="no"
+                marginHeight="0"
+                marginWidth="0"
+                src="https://maps.google.com/maps?width=100%25&amp;height=400&amp;hl=en&amp;q=11,%20Ogundiaro%20Street,%20Oworon%E1%B9%A3oki,%20Nigeria+(Hogg%20Anderson)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+              />
+            </div>
+          )}
         </div>
+
         <div className="">
           <GetInTouch />
         </div>
