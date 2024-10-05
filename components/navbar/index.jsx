@@ -3,6 +3,7 @@ import Link from "next/link";
 import { lexendPeta, poppins } from "@/utils/font/fonts";
 import { Button } from "@mantine/core";
 import { IconArrowRight } from "@tabler/icons-react";
+import Image from "next/image";
 
 const NavBar = () => {
   return (
@@ -53,7 +54,13 @@ const NavBar = () => {
             </li>
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">Logo</a>
+        <Image
+          src={"/logo.png"}
+          alt="logo"
+          width={500}
+          height={500}
+          className="w-[40%]"
+        />
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal text-base px-1">
