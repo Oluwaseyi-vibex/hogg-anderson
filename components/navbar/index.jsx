@@ -125,7 +125,7 @@ const NavBar = () => {
                   <Link href={"/academy/data-entry"}>Data Entry Academy</Link>
                 </li>
                 <li>
-                  <Link href={"/Services/Inventory-Management-System"}>
+                  <Link href={"/academy/accounting-software-training"}>
                     Accounting Software Training
                   </Link>
                 </li>
