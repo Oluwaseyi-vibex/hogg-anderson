@@ -15,8 +15,8 @@ const OperaPMSPage = () => {
             Certificate Course in Hotel Property Management System
           </h1>
           <p className="text-xl mt-4">
-            Master OPERA PMS, the world's leading Property Management System for
-            hotels.
+            Master OPERA PMS, the world&apos;s leading Property Management
+            System for hotels.
           </p>
           <button className="btn btn-ghost bg-blue border-none mt-8 px-8 text-white text-lg">
             Enroll Now
@@ -27,7 +27,7 @@ const OperaPMSPage = () => {
       {/* Course Overview Section */}
       <section className="py-16 bg-[#2C2C2C]">
         <h2 className="text-4xl font-bold text-center text-blue mb-12">
-          What You'll Learn
+          What You&apos;ll Learn
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-8">
           <div className="card shadow-lg bg-[#444444] p-6 text-center">
