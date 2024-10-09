@@ -130,18 +130,18 @@ const NavBar = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link href={"/Services/Sales-Analytics"}>
+                  <Link href={"/academy/property-management-system"}>
                     Property Mgt. System in Hotels
                   </Link>
                 </li>
                 <li className="w-full">
-                  <Link href={"/Services/Accounting-System"}>
+                  <Link href={"/academy/hospitality-accounting-diploma"}>
                     Diploma in Hospitality Accounting
                   </Link>
                 </li>
 
                 <li className="w-full">
-                  <Link href={"/Services/Business-Advisory"}>
+                  <Link href={"/academy/adv-diploma-in-hospitality-accounting"}>
                     Adv. Diploma in Hospitality Accounting
                   </Link>
                 </li>

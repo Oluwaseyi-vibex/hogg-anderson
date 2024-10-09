@@ -41,12 +41,12 @@ const DataEntryAcademyPage = () => {
           <h1 className="text-5xl font-bold">
             LEARN DIGITAL SKILLS FOR THE WORKPLACE
           </h1>
-          <p className="text-lg mt-4">
+          <p className="text-xl mt-4">
             Start a Hustle, Find a Job, Freelance Your Skills, Grow Your
             Business
           </p>
           <button className="btn btn-ghost bg-orange border-none mt-8 px-8 text-white text-lg">
-            Get Started Today
+            Enroll Now
           </button>
         </div>
       </section>
