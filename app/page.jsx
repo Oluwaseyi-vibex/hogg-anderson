@@ -9,12 +9,13 @@ import { Button } from "@mantine/core";
 import { IconArrowRight, IconSignRight } from "@tabler/icons-react";
 import GetInTouch from "@/components/contact";
 import TestimonialCarousel from "@/components/testimonialCarousel";
+import HeroCarousel from "@/components/hero";
 
 export default function Home() {
   return (
-    <div className={`${poppins.className} w-full px-20 mt-14`}>
-      <main className="flex w-full items-start  justify-end">
-        <div className="flex flex-col gap-3 w-full">
+    <div className={`${poppins.className} w-full   `}>
+      {/* <main className="flex w-full items-start  justify-end"> */}
+      {/* <div className="flex flex-col gap-3 w-full">
           <p className="rounded-full shadow-md shadow-black cursor-pointer font-light border-white border-[0.5px] w-fit bg-transparent py-1 px-8 text-sm text-[#4169E1]">
             Hogg Anderson Business Solutions Limited
           </p>
@@ -47,63 +48,13 @@ export default function Home() {
           >
             Get started
           </Button>
-        </div>
+        </div> */}
 
-        <div className="flex w-full  items-center justify-center ">
-          <Image
-            src="/hero.png"
-            alt=""
-            width={1000}
-            height={800}
-            className="w-[70%]"
-          />
-          {/* <div className="flex flex-col gap-2">
-            
+      <HeroCarousel />
+      {/* </main> */}
 
-            <div
-              style={{
-                backgroundImage: `url(/cost-control.jpg)`,
-                backgroundRepeat: "no-repeat",
-                backgroundSize: "cover",
-              }}
-              className="w-[300px] border-2 border-black rounded-3xl text-black  flex flex-col justify-end text-3xl font-bold p-5 h-[200px]"
-            >
-              Cost <br /> Control
-            </div>
-          </div>
-
-          <div className="flex flex-col gap-2">
-            <div
-              style={{
-                backgroundImage: `url(/Tax2.jpg)`,
-                backgroundRepeat: "no-repeat",
-                backgroundSize: "auto",
-              }}
-              className="w-[300px] border-2 border-black rounded-3xl text-white  flex flex-col justify-end text-3xl font-bold p-5 h-[175px]"
-            >
-              Tax <br /> Compliance
-            </div>
-
-            <div className="w-[300px] border-2 bg-black border-black rounded-3xl text-white  flex flex-col justify-end text-3xl font-bold p-5 h-[175px]">
-              Business <br /> Planning
-            </div>
-
-            <div
-              style={{
-                backgroundImage: `url(/investor-confidence.jpg)`,
-                backgroundRepeat: "no-repeat",
-                backgroundSize: "cover",
-              }}
-              className="w-[300px] border-2  border-black rounded-3xl text-white  flex flex-col justify-end text-3xl font-bold p-5 h-[175px]"
-            >
-              Investor <br /> Confidence
-            </div>
-          </div> */}
-        </div>
-      </main>
-
-      <div className="w-full flex py-32 px-16 text-black bg-[#F5F5F5] h-full rounded-b-3xl mt-24">
-        <div className="flex w-[30%] h-full flex-col gap-6">
+      <div className="w-full  flex md:flex-row flex-col space-y-8 py-12 md:py-24 md:px-16 text-black bg-[#F5F5F5] h-full rounded-b-3xl ">
+        <div className="flex md:w-[30%] px-4 h-full flex-col gap-2 md:gap-6">
           <h1 className="text-4xl font-semibold ">
             High-impact <br /> Services
           </h1>
@@ -118,7 +69,7 @@ export default function Home() {
             bg={"#4169E1"}
             size="xl"
             radius="md"
-            mt="xl"
+            mt="md"
             justify="space-between"
             w={250}
           >
@@ -126,8 +77,8 @@ export default function Home() {
           </Button>
         </div>
 
-        <div className="w-[70%] flex flex-col gap-16 items-end h-full">
-          <div className="flex gap-12">
+        <div className="md:w-[70%] flex flex-col md:gap-16 gap-8 items-center md:items-end h-full">
+          <div className="flex md:flex-row flex-col gap-12">
             <ServicesCard
               img={"/financial-accuracy.png"}
               title={"Accounting Services"}
@@ -146,7 +97,7 @@ export default function Home() {
             />
           </div>
 
-          <div className="flex gap-12">
+          <div className="flex  md:flex-row flex-col gap-12">
             <ServicesCard
               img={"/office.jpg"}
               title={"Sales Analytics"}
@@ -164,7 +115,7 @@ export default function Home() {
             />
           </div>
 
-          <div className="flex gap-12">
+          <div className="flex  md:flex-row flex-col gap-12">
             <ServicesCard
               img={"/startup-colleagues-reviewing.jpg"}
               title={"Business Advisory"}
@@ -183,16 +134,16 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="w-full  mt-36 flex">
+      <div className="w-full md:px-4 md:mt-36 mb-20 md:mb-0 gap-6 md:gap-0 mt-16 flex md:flex-row flex-col">
         <Image
           alt=""
           src={"/aboutsection.jpg"}
           width={1000}
           height={150}
-          className="w-[50%] h-[60%] rounded-xl"
+          className="md:w-[50%]  md:h-[60%] md:rounded-xl"
         />
 
-        <div className="w-[50%] pl-28 flex flex-col gap-10">
+        <div className="md:w-[50%] px-4 md:pl-28 flex flex-col gap-5 md:gap-10">
           <h1 className="text-4xl text-[#F5F5F5] font-bold">
             The story behind our company
           </h1>

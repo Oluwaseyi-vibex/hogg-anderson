@@ -1,5 +1,6 @@
 import { Footer, NavBar } from "@/components";
 import "./globals.css";
+// import "swiper/swiper-bundle.min.css";
 import "@mantine/core/styles.css";
 
 import { Button, MantineProvider } from "@mantine/core";
@@ -14,7 +15,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`bg-[#333333] w-full h-full  p-4 md:p-0  antialiased`}>
+      <body className={`bg-[#333333] w-full h-full antialiased`}>
         <MantineProvider>
           <NavBar />
           {children}

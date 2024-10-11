@@ -56,14 +56,14 @@ const TestimonialCarousel = () => {
         interval={5000}
       >
         {testimonials.map((testimonial, index) => (
-          <div key={index} className="p-6  rounded shadow-md">
+          <div key={index} className="p-6  rounded md:shadow-md">
             <p className="text-lg text-[#4169E1] italic">
               &quot;{testimonial.feedback}&quot;
             </p>
             <p className="mt-4 font-bold text-[#F5F5F5] text-sm">
               {testimonial.name}
             </p>
-            <p className="text-sm mb-6 text-[#F5F5F5]/50">
+            <p className="text-sm mb-8 text-[#F5F5F5]/50">
               {testimonial.position}
             </p>
           </div>

@@ -45,8 +45,11 @@ const features = [
 
 export function FeaturesTitle() {
   const items = features.map((feature) => (
-    <div key={feature.title}>
-      <ThemeIcon size={44} radius="md" variant="gradient" bg={"#FFCC99"}>
+    <div
+      // className="flex flex-col items-center text-center"
+      key={feature.title}
+    >
+      <ThemeIcon size={54} radius="md" variant="gradient" bg={"#FFCC99"}>
         <feature.icon
           style={{ width: rem(26), height: rem(26) }}
           stroke={1.5}
@@ -63,7 +66,7 @@ export function FeaturesTitle() {
 
   return (
     <div className={classes.wrapper}>
-      <Grid gutter={80}>
+      <Grid gutter={45}>
         <Grid.Col span={{ base: 12, md: 5 }}>
           <Title className={classes.title} c={"white"} order={2}>
             Why Accurate Monthly Inventory Valuation Matters
@@ -76,15 +79,16 @@ export function FeaturesTitle() {
             efficiency, and build investor trust.
           </Text>
 
-          <Button
+          {/* <Button
             variant="gradient"
             bg={"#4169E1"}
             size="lg"
             radius="md"
             mt="xl"
+            className="hidden md:block"
           >
             Get started
-          </Button>
+          </Button> */}
         </Grid.Col>
         <Grid.Col span={{ base: 12, md: 7 }}>
           <SimpleGrid cols={{ base: 1, md: 2 }} spacing={30}>

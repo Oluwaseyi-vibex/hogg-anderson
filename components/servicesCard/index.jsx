@@ -18,7 +18,7 @@ const ServicesCard = ({ img, title, description }) => {
           {description}
         </p>
       </div>
-      <button className="btn text-white">Read more</button>
+      <button className="btn bg-blue text-white">Read more</button>
     </div>
   );
 };

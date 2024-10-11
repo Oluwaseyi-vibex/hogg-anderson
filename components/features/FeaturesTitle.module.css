@@ -1,5 +1,6 @@
+/* Base styles */
 .wrapper {
-  margin: calc(var(--mantine-spacing-xl) * 4) var(--mantine-spacing-xl);
+  margin: calc(var(--mantine-spacing-xl) * 4) var(--mantine-spacing-lg);
 }
 
 .title {
@@ -9,4 +10,27 @@
   line-height: 1.1;
   margin-bottom: var(--mantine-spacing-md);
   color: "#4169E1";
+}
+
+/* Tablet Styles (768px and above) */
+@media (max-width: 1024px) {
+  .wrapper {
+    margin: calc(var(--mantine-spacing-xl) * 2) var(--mantine-spacing-lg);
+  }
+
+  .title {
+    font-size: 28px;
+  }
+}
+
+/* Mobile Styles (480px and below) */
+@media (max-width: 768px) {
+  .wrapper {
+    /* margin: var(--mantine-spacing-x˙) var(--mantine-spacing-md); */
+  }
+
+  .title {
+    font-size: 32px;
+    line-height: 1.2;
+  }
 }
