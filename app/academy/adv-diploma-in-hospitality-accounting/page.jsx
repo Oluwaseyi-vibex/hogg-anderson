@@ -4,7 +4,7 @@ const AdvancedDiplomaCoursePage = () => {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       {/* Hero Section */}
-      <section className="relative bg-[url('/hospitalityaccounting.jpg')] bg-cover bg-no-repeat bg-center text-white h-[500px] flex flex-col justify-center items-center">
+      <section className="relative bg-[url('/hospitalityaccounting.jpg')] bg-cover bg-no-repeat bg-center text-white h-[500px] px-4 flex flex-col justify-center items-center">
         <div className="bg-black/50 absolute inset-0"></div>
         {/* Dark overlay */}
         <div className="relative z-10 text-center">
@@ -23,8 +23,8 @@ const AdvancedDiplomaCoursePage = () => {
       </section>
 
       {/* Course Overview Section */}
-      <section className="py-16 bg-bg px-8">
-        <h2 className="text-5xl font-bold text-center text-blue-400 mb-12">
+      <section className="py-16 bg-bg px-4 md:px-8">
+        <h2 className="text-4xl md:text-5xl font-bold text-center text-blue-400 mb-12">
           What You’ll Learn
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">

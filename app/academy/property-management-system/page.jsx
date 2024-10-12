@@ -60,26 +60,18 @@ const OperaPMSPage = () => {
           height={1000}
           className="w-full absolute"
         />
-        <section className="pb-16 pt-52 bg-[#333333] px-8 ">
-          {/* <Image
-          src={"/wave.svg"}
-          alt=""
-          width={1000}
-          height={1000}
-          className="w-full"
-        /> */}
-
+        <section className="pb-16 pt-16 md:pt-52 bg-[#333333] px-8 ">
           <h2 className="text-4xl font-bold text-center text-blue mb-12">
             Courses
           </h2>
 
           <div className="w-full flex flex-col gap-6">
-            <div className="collapse w-full text-left text-xl font-semibold text-blue bg-gray-700 h-fit rounded-lg">
+            <div className="collapse w-full text-left text-xl font-semibold text-blue bg-gray-700 h-full rounded-lg">
               <input type="radio" name="my-accordion-1" defaultChecked />
               <div className="collapse-title text-xl">
                 Introduction to OPERA PMS
               </div>
-              <div className="collapse-content bg-gray-600  h-fit rounded-md mx-2 mb-2 p-1 text-lg">
+              <div className="collapse-content bg-gray-600  rounded-md mx-2 mb-2 p-1 text-lg">
                 <ul className="list-disc pl-6 text-white text-lg space-y-2">
                   <li>Navigation Menus</li>
                   <li>Changing Passwords</li>
@@ -92,10 +84,10 @@ const OperaPMSPage = () => {
               </div>
             </div>
 
-            <div className="collapse w-full text-left text-xl font-semibold text-blue bg-gray-700 h-fit rounded-lg">
+            <div className="collapse w-full text-left text-xl font-semibold text-blue bg-gray-700  rounded-lg">
               <input type="radio" name="my-accordion-1" />
               <div className="collapse-title text-xl">Reservation System</div>
-              <div className="collapse-content bg-gray-600  h-fit rounded-md mx-2 mb-2 p-1 text-lg">
+              <div className="collapse-content bg-gray-600   rounded-md mx-2 mb-2 p-1 text-lg">
                 <ul className="list-disc pl-6 text-white text-lg space-y-2">
                   <li>Welcome & Overview</li>
                   <li>Accessing the Rate Query Screen</li>
@@ -110,10 +102,10 @@ const OperaPMSPage = () => {
               </div>
             </div>
 
-            <div className="collapse w-full text-left text-xl font-semibold text-blue bg-gray-700 h-fit rounded-lg">
+            <div className="collapse w-full text-left text-xl font-semibold text-blue bg-gray-700  rounded-lg">
               <input type="radio" name="my-accordion-1" />
               <div className="collapse-title text-xl">Checking in Guest</div>
-              <div className="collapse-content bg-gray-600  h-fit rounded-md mx-2 mb-2 p-1 text-lg">
+              <div className="collapse-content bg-gray-600   rounded-md mx-2 mb-2 p-1 text-lg">
                 <ul className="list-disc pl-6 text-white text-lg space-y-2">
                   <li>How to check in Guest</li>
                   <li>Front Desk Menu</li>
@@ -125,10 +117,10 @@ const OperaPMSPage = () => {
               </div>
             </div>
 
-            <div className="collapse w-full text-left text-xl font-semibold text-blue bg-gray-700 h-fit rounded-lg">
+            <div className="collapse w-full text-left text-xl font-semibold text-blue bg-gray-700  rounded-lg">
               <input type="radio" name="my-accordion-1" />
               <div className="collapse-title text-xl">Checking out Guest</div>
-              <div className="collapse-content bg-gray-600  h-fit rounded-md mx-2 mb-2 p-1 text-lg">
+              <div className="collapse-content bg-gray-600   rounded-md mx-2 mb-2 p-1 text-lg">
                 <ul className="list-disc pl-6 text-white text-lg space-y-2">
                   <li>Introduction to Checkout</li>
                   <li>Overview of the Checkout Process</li>
@@ -140,10 +132,10 @@ const OperaPMSPage = () => {
               </div>
             </div>
 
-            <div className="collapse w-full text-left text-xl font-semibold text-blue bg-gray-700 h-fit rounded-lg">
+            <div className="collapse w-full text-left text-xl font-semibold text-blue bg-gray-700  rounded-lg">
               <input type="radio" name="my-accordion-1" />
               <div className="collapse-title text-xl">Advanced Features</div>
-              <div className="collapse-content bg-gray-600  h-fit rounded-md mx-2 mb-2 p-1 text-lg">
+              <div className="collapse-content bg-gray-600   rounded-md mx-2 mb-2 p-1 text-lg">
                 <ul className="list-disc pl-6 text-white text-lg space-y-2">
                   <li>Amending Bookings</li>
                   <li>Canceling Bookings</li>
@@ -162,7 +154,7 @@ const OperaPMSPage = () => {
             Start your journey with us and gain valuable skills in Hotel
             Property Management System
           </p>
-          <p className=" my-3 text-orange w-[700px]">
+          <p className=" my-3 text-orange md:text-base text-sm md:w-[700px]">
             Take the next step in your accounting career with Hogg Anderson
             Accounting Software Solutions. Contact us at 08029514484 to enroll
             or learn more about our training programs.
@@ -173,7 +165,7 @@ const OperaPMSPage = () => {
         </section>
       </div>
 
-      <Pricing />
+      {/* <Pricing /> */}
     </div>
   );
 };

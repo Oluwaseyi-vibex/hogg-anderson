@@ -185,7 +185,7 @@ const NewAcademyPageDaisy = () => {
           Start your journey with us and gain valuable skills in accounting
           software.
         </p>
-        <p className=" my-3 text-orange w-[700px]">
+        <p className=" my-3 text-orange px-4 md:text-base text-sm md:w-[700px]">
           Take the next step in your accounting career with Hogg Anderson
           Accounting Software Solutions. Contact us at 08029514484 to enroll or
           learn more about our training programs.

@@ -14,7 +14,7 @@ const NavBar = () => {
 
   return (
     <div
-      className={`${poppins.className} md:sticky top-0 z-50 w-full md:px-16 p-5 flex items-center justify-center navbar font-semibold  py-6  bg-[#333333] text-[#F5F5F5]`}
+      className={`${poppins.className} sticky top-0  z-50 w-full md:px-16 p-5 flex items-center justify-center navbar font-semibold  py-6  bg-[#333333] text-[#F5F5F5]`}
     >
       <div className=" md:flex-row  md:justify-start justify-between flex-row-reverse">
         <div className="dropdown">

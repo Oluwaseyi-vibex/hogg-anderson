@@ -18,9 +18,9 @@ const GetIntouch = () => {
   }, []);
 
   return (
-    <div className={`${poppins.className}`}>
+    <div className={`${poppins.className} w-full`}>
       <div
-        className="w-full h-[400px] text-[#333333] flex flex-col gap-3 items-center justify-center bg-cover bg-no-repeat"
+        className="w-full h-[400px] text-[#333333] flex flex-col gap-3 px-4 items-center justify-center bg-cover bg-right bg-no-repeat"
         style={{ backgroundImage: `url(/contactPageBg.jpg)` }}
       >
         <h1 className="text-5xl font-medium">Get in Touch with Us</h1>
@@ -29,12 +29,12 @@ const GetIntouch = () => {
         </p>
       </div>
 
-      <div className="w-full flex flex-col gap-8 py-8 px-20 h-full">
+      <div className="w-full flex flex-col gap-8 py-8 px-4 md:px-20 h-full">
         <h1 className="text-3xl text-[#F5F5F5] font-semibold">
           Our Contact Information
         </h1>
-        <div className="flex items-center gap-3">
-          <div className="w-[50%]">
+        <div className="flex md:flex-row flex-col items-center gap-3">
+          <div className="md:w-[50%] w-full">
             <div className="flex text-[#F5F5F5] flex-col gap-8">
               <div>
                 <h1 className="text-xl text-[#4169e1]">Address:</h1>
@@ -65,7 +65,7 @@ const GetIntouch = () => {
           </div>
 
           {isClient && (
-            <div className="w-[80%]">
+            <div className="md:w-[80%] w-full">
               <iframe
                 width="100%"
                 height="400"

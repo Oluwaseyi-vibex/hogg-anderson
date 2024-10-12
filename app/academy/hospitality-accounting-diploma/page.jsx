@@ -100,13 +100,13 @@ const HospitalityAccountingPage = () => {
       </div>
 
       {/* Key Course Topics */}
-      <section className="py-16 bg-bg px-8">
+      <section className="py-16 bg-bg px-4 md:px-8">
         <h2 className="text-4xl font-bold text-center text-blue mb-12">
           Key Course Topics
         </h2>
-        <div className="grid grid-cols-1 place-items-center md:grid-cols-2 px-12 gap-8">
+        <div className="grid grid-cols-1 place-items-center md:grid-cols-2 md:px-12 gap-8">
           {/* Topic 1 */}
-          <div className="card w-[600px]  bg-[#444444] p-8">
+          <div className="card md:w-[600px]  bg-[#444444] p-8">
             <h3 className="text-2xl text-orange font-semibold">
               Financial Accounting Fundamentals
             </h3>
@@ -116,7 +116,7 @@ const HospitalityAccountingPage = () => {
             </p>
           </div>
           {/* Topic 2 */}
-          <div className="card w-[600px]  bg-[#444444] p-8">
+          <div className="card md:w-[600px]  bg-[#444444] p-8">
             <h3 className="text-2xl text-orange font-semibold">
               Management of Accounts Payable
             </h3>
@@ -126,7 +126,7 @@ const HospitalityAccountingPage = () => {
             </p>
           </div>
           {/* Topic 3 */}
-          <div className="card w-[600px]  bg-[#444444] p-8">
+          <div className="card md:w-[600px]  bg-[#444444] p-8">
             <h3 className="text-2xl text-orange font-semibold">
               Management of Accounts Receivable
             </h3>
@@ -136,7 +136,7 @@ const HospitalityAccountingPage = () => {
             </p>
           </div>
           {/* Topic 4 */}
-          <div className="card w-[600px]  bg-[#444444] p-8">
+          <div className="card md:w-[600px]  bg-[#444444] p-8">
             <h3 className="text-2xl text-orange font-semibold">
               Inventory Management
             </h3>
@@ -146,7 +146,7 @@ const HospitalityAccountingPage = () => {
             </p>
           </div>
           {/* Topic 5 */}
-          <div className="card w-[600px]  bg-[#444444] p-8">
+          <div className="card md:w-[600px]  bg-[#444444] p-8">
             <h3 className="text-2xl text-orange font-semibold">
               General Ledger and Financial Reporting
             </h3>

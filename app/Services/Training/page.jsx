@@ -8,8 +8,8 @@ import React from "react";
 
 const Training = () => {
   return (
-    <div className={`${poppins.className} h-full  mx-10 my-8`}>
-      <div className="text-[#F5F5F5]/80 bg-[#333333] sticky top-[95px] py-1 flex items-center gap-4 text-sm">
+    <div className={`${poppins.className} h-full mx-4 md:mx-10 md:my-8`}>
+      <div className="text-[#F5F5F5]/80 bg-[#333333] sticky top-0 py-2 flex items-center gap-4 text-sm">
         <p className="cursor-pointer">Home</p>
         <div className={`text-[${Colors.blue}] text-xs`}>{`>`}</div>{" "}
         <Link className="cursor-pointer link link-hover " href={"#"}>
@@ -20,7 +20,7 @@ const Training = () => {
           Training
         </Link>
       </div>
-      <div className="my-5 w-full flex   gap-7">
+      <div className="my-5 w-full flex md:flex-row flex-col gap-7">
         <Image
           src={"/investor-confidence.jpg"}
           w={"650px"}
@@ -44,10 +44,10 @@ const Training = () => {
         </h1>
 
         <div
-          className={`flex flex-col mt-2 gap-3 text-sm w-[70%] text-[${Colors.white}]/60 `}
+          className={`flex flex-col mt-2 gap-3 text-sm md:w-[70%] text-[${Colors.white}]/60 `}
         >
           <div
-            className={`flex flex-col gap-3 text-sm  w-[70%] text-[${Colors.white}]/60 `}
+            className={`flex flex-col gap-3 text-sm  md:w-[70%] text-[${Colors.white}]/60 `}
           >
             At Hogg Anderson Business Solutions Limited, we understand that a
             well-trained team is essential to the success of any business.
@@ -64,7 +64,7 @@ const Training = () => {
           </p>
         </div>
         <div
-          className={`flex flex-col gap-3 text-sm w-[70%] text-[${Colors.white}]/60 `}
+          className={`flex flex-col gap-3 text-sm md:w-[70%] text-[${Colors.white}]/60 `}
         >
           <h1
             className={`text-[${Colors.blue}] font-medium text-2xl mt-10 mb-2`}
@@ -123,7 +123,7 @@ const Training = () => {
           </List>
 
           <div
-            className={`flex flex-col gap-3 text-sm w-[70%] text-[${Colors.white}]/60 `}
+            className={`flex flex-col gap-3 text-sm md:w-[70%] text-[${Colors.white}]/60 `}
           >
             <h1
               className={`text-[${Colors.blue}] font-medium text-2xl mt-10 mb-2`}

@@ -32,9 +32,11 @@ import React from "react";
 
 const About = () => {
   return (
-    <div className={`${poppins.className} h-full flex flex-col gap-8 pt-16 `}>
-      <div className="px-24 flex  flex-col gap-12 h-full pb-24">
-        <div className="flex items-center h-fit  gap-4 text-md text-[#F5F5F5]/60">
+    <div
+      className={`${poppins.className} h-full flex flex-col gap-8 pt-8 md:pt-16 `}
+    >
+      <div className="md:px-24 px-4 flex  flex-col gap-12 h-full md:pb-24">
+        <div className="flex items-center h-fit  gap-4 text-sm md:text-md text-[#F5F5F5]/60">
           <FontAwesomeIcon
             color=""
             icon={faInfoCircle}
@@ -44,17 +46,17 @@ const About = () => {
         </div>
 
         <div className="flex h-fit flex-col  gap-6">
-          <h1 className="text-6xl flex gap-5 font-semibold tracking-wider leading-[70px] text-[#F5F5F5]">
-            <div className="w-[10px] h-[70px] bg-[#4169E1] rounded-l-xl"></div>
+          <h1 className="text-5xl md:text-6xl flex gap-5 font-semibold tracking-wider leading-[70px] text-[#F5F5F5]">
+            <div className="w-[10px] md:h-[70px] bg-[#4169E1] rounded-l-xl"></div>
             <p> Who We Are</p>
           </h1>
-          <div className="text-6xl max-h-full flex gap-5 font-semibold tracking-wider leading-[70px] text-[#F5F5F5]">
-            <div className="w-[10px] h-[140px] bg-[#4169E1] rounded-l-xl"></div>
+          <div className="text-5xl hidden md:text-6xl max-h-full md:flex gap-5 font-semibold tracking-wider md:leading-[70px] text-[#F5F5F5]">
+            <div className="w-[10px] md:h-[140px] bg-[#4169E1] rounded-l-xl"></div>
             <p>
               What is Hogg Anderson and <br /> How Valid is It?
             </p>
           </div>
-          <p className="text-lg w-[700px] text-[#F5F5F5]/50">
+          <p className="text-sm md:text-lg md:w-[700px] text-[#F5F5F5]/50">
             At Hogg Anderson Business Solutions Limited, we specialize in
             providing cost accounting and business solutions for the hospitality
             industry. With a commitment to excellence, we empower restaurants,
@@ -64,13 +66,13 @@ const About = () => {
         </div>
       </div>
 
-      <div className="h-full w-full flex py-24 px-12 justify-between bg-[#F5F5F5]">
-        <div className="w-full flex items-start justify-center">
+      <div className="h-full w-full flex md:flex-row flex-col py-10 gap-16 md:py-24 px-4 md:px-12 justify-between bg-[#F5F5F5]">
+        <div className="w-full flex  items-start md:justify-center">
           <Image
             src={"/aboutPage.png"}
             alt=""
             width={1000}
-            className="w-[80%]"
+            className="md:w-[80%]"
             height={1000}
           />
         </div>
@@ -96,7 +98,7 @@ const About = () => {
             streamline their operations, reduce costs, and improve
             profitability.
           </p>
-          <div className="flex gap-8">
+          {/* <div className="flex gap-8">
             <button className="font-normal btn rounded-sm h-fit min-h-fit py-4 hover:text-white bg-[#FFCC99] border-none text-white text-lg px-6">
               Company
             </button>
@@ -106,7 +108,7 @@ const About = () => {
             <button className="font-normal btn rounded-sm h-fit min-h-fit py-4 hover:text-white bg-[#E8E8E8] border-none text-black text-lg px-6">
               Our Team
             </button>
-          </div>
+          </div> */}
 
           <p>
             At Hogg Anderson Business Solutions Limited, we don’t just crunch

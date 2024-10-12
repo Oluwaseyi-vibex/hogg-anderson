@@ -121,15 +121,15 @@ const BlogPost = ({ params }) => {
   return (
     <div className={`${poppins.className} w-full`}>
       <div
-        className={`px-10 py-8 flex gap-2 flex-col w-full bg-[${Colors.orange}]`}
+        className={`px-4 md:px-10 py-8 flex gap-2 flex-col w-full bg-[${Colors.orange}]`}
       >
-        <div className="text-[#4169e1] sticky top-[95px] py-1 flex items-center gap-4 text-sm">
+        <div className="text-[#4169e1] sticky top-[95px] bg-[#FFCC99] py-1 flex items-center gap-4 text-sm">
           <p className="cursor-pointer">Home</p>
           <div className={`text-[${Colors.bg}] text-xs`}>{`>`}</div>{" "}
           <Link className="cursor-pointer link link-hover " href={"/Blog"}>
             Blog
           </Link>
-          <div className={`text-[${Colors.bg}] text-xs`}>{`>`}</div>{" "}
+          <div className={`text-[${Colors.bg}] text-xs`}>{`>`}</div> <br />
           <Link
             className="cursor-pointer link uppercase link-hover "
             href={"#"}
@@ -142,7 +142,7 @@ const BlogPost = ({ params }) => {
         </h1>
         <div className={`w-[100px] h-1 bg-[#4169e1]`}></div>
       </div>
-      <div className="px-10 py-5 flex flex-col gap-5">
+      <div className="md:px-10 md:py-5 flex flex-col gap-5">
         <Image
           w={700}
           h={300}
@@ -152,7 +152,7 @@ const BlogPost = ({ params }) => {
         />
         <div
           dangerouslySetInnerHTML={{ __html: post.content }}
-          className={`text-[${Colors.white}] flex flex-col gap-5 w-[90%] font-thin text-lg`}
+          className={`text-[${Colors.white}] flex flex-col gap-5 px-4 md:w-[90%] font-thin text-lg`}
         />
 
         <p className={`text-[${Colors.white}] font-thin text-lg`}></p>

@@ -69,23 +69,24 @@ const BlogPage = () => {
   ];
 
   return (
-    <div className={`container relative  mx-auto px-10 bg-[${Colors.white}]`}>
+    <div
+      className={`container relative  mx-auto px-4 md:px-10 bg-[${Colors.white}]`}
+    >
       <div
         style={{
           backgroundImage: `url('/bloghero.jpg')`,
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
         }}
-        className={`h-screen w-full `}
+        className={`h-[400px] md:h-screen w-full `}
       >
         <div
-          className={`w-full flex text-base pt-[250px] gap-4 flex-col items-center`}
-        >
-          <p className={`text-black font-medium`}>
-            Get the latest updates and financial advise from Hogg Anderson
-          </p>
-        </div>
+          className={`w-full flex text-base md:pt-[300px] gap-4 flex-col items-center`}
+        ></div>
       </div>
+      <p className={`text-blue  text-4xl mt-9 font-semibold`}>
+        Get the latest updates and financial advise from Hogg Anderson
+      </p>
       <div className="grid h-full my-12 pb-8 md:grid-cols-3 gap-8">
         {posts.map((post) => (
           <div

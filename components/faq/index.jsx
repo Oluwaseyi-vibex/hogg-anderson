@@ -5,9 +5,15 @@ import { Colors } from "@/utils/font/color";
 
 const FAQSection = () => {
   return (
-    <Container size="md" my="xl">
+    <Container size="xl" my="xl" px="md">
       {/* Title Section */}
-      <Title c={Colors.blue} order={2} align="center" my="lg">
+      <Title
+        c={Colors.blue}
+        order={2}
+        align="center"
+        my="lg"
+        className="text-3xl md:text-4xl"
+      >
         Frequently Asked Questions
       </Title>
 
@@ -15,9 +21,11 @@ const FAQSection = () => {
       <Accordion
         variant="separated"
         radius="md"
-        w={1000}
         transitionDuration={300}
-        sx={{ backgroundColor: "#f9f9f9" }} // Background for FAQ
+        sx={{
+          backgroundColor: "#f9f9f9",
+        }}
+        className="max-w-full md:min-w-[1200px] " // Adjust width for responsive behavior
       >
         {/* FAQ 1 */}
         <Accordion.Item value="faq-1">
@@ -93,19 +101,12 @@ const FAQSection = () => {
 
       {/* CTA Section */}
       <Text
-        align="center"
+        // align="center"
         c={Colors.white}
-        className="flex items-center gap-5 justify-center"
-        mt="lg"
+        className="flex items-center gap-5 text-sm justify-center relative top-8 "
       >
-        <p> Didn&apos;t find what you were looking for? </p>{" "}
-        <Button
-          component="a"
-          //   href="/contact"
-          variant="light"
-          color="blue"
-          //   mt="md"
-        >
+        Didn&apos;t find what you were looking for?{" "}
+        <Button component="a" variant="light" color="blue" className="">
           Contact Us
         </Button>
       </Text>
