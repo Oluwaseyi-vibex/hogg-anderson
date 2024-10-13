@@ -10,6 +10,7 @@ import { IconArrowRight, IconSignRight } from "@tabler/icons-react";
 import GetInTouch from "@/components/contact";
 import TestimonialCarousel from "@/components/testimonialCarousel";
 import HeroCarousel from "@/components/hero";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -63,18 +64,22 @@ export default function Home() {
             objectives through audit, tax, advisory, risk and performance
             services.
           </p>
-          <Button
-            rightSection={<IconArrowRight size={20} />}
-            variant="gradient"
-            bg={"#4169E1"}
-            size="xl"
-            radius="md"
-            mt="md"
-            justify="space-between"
-            w={250}
-          >
-            Get in touch
-          </Button>
+
+          <Link href={"/getInTouch"}>
+            <Button
+              rightSection={<IconArrowRight size={20} />}
+              variant="gradient"
+              bg={"#4169E1"}
+              size="xl"
+              radius="md"
+              mt="md"
+              justify="space-between"
+              w={250}
+              className="shadow-md"
+            >
+              Get in touch
+            </Button>
+          </Link>
         </div>
 
         <div className="md:w-[70%] flex flex-col md:gap-16 gap-8 items-center md:items-end h-full">
@@ -86,6 +91,7 @@ export default function Home() {
               description={
                 "Whether you’re launching a startup or running an established business, Hogg Anderson Business Solutions Limited offers comprehensive bookkeeping and payroll solutions tailored to your needs. We provide..."
               }
+              link={"/Services/Accounting-Services"}
             />
             <ServicesCard
               img={"/cost-control.jpg"}
@@ -94,6 +100,7 @@ export default function Home() {
               description={
                 "Conduct regular physical inventory counts to ensure that your records match the actual stock levels."
               }
+              link={"/Services/Inventory-Management-System"}
             />
           </div>
 
@@ -105,6 +112,7 @@ export default function Home() {
               description={
                 "Our sales analytics service aims to empower restaurants by providing actionable insights based on weekly sales data. By identifying top-selling items and underperforming products, we enable informed decision-making and strategic planning."
               }
+              link={"/Services/Sales-Analytics"}
             />
             <ServicesCard
               img={"/person-office.jpg"}
@@ -112,6 +120,7 @@ export default function Home() {
               description={
                 "Identifying and reconciling variances is crucial. We analyze discrepancies between actual and expected costs, providing actionable insights to improve efficiency."
               }
+              link={"/Services/Accounting-System"}
             />
           </div>
 
@@ -122,6 +131,7 @@ export default function Home() {
               description={
                 "Keep an eye on your inventory turnover ratio to identify slow-moving items and make informed decisions about reordering and promotions."
               }
+              link={"/Services/Business-Advisory"}
             />
             <ServicesCard
               img={"/investor-confidence.jpg"}
@@ -129,6 +139,7 @@ export default function Home() {
               description={
                 "Our customized stock movement reports track inventory flow, highlight trends, and identify slow-moving items of food and beverages. This aids in inventory management and decision-making."
               }
+              link={"/Services/Training"}
             />
           </div>
         </div>
@@ -158,9 +169,11 @@ export default function Home() {
             commitment to excellence in every service we offer. Let us be your
             trusted partner in optimizing your business for success.
           </p>
-          <button className="btn bg-[#4169E1] text-white">
-            About our firm
-          </button>
+          <Link href={"/About"}>
+            <button className="btn bg-[#4169E1] text-white">
+              About our firm
+            </button>
+          </Link>
         </div>
       </div>
 

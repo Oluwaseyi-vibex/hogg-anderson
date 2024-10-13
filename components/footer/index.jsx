@@ -1,4 +1,11 @@
+import {
+  IconBrandGmail,
+  IconBrandInstagram,
+  IconBrandWhatsapp,
+  IconMail,
+} from "@tabler/icons-react";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const Footer = () => {
@@ -20,23 +27,77 @@ const Footer = () => {
       </aside>
       <nav>
         <h6 className="footer-title">Services</h6>
-        <a className="link link-hover">Branding</a>
-        <a className="link link-hover">Design</a>
-        <a className="link link-hover">Marketing</a>
-        <a className="link link-hover">Advertisement</a>
+        <Link
+          href={"/Services/Accounting-Services"}
+          className="link-hover link"
+        >
+          Accounting Services
+        </Link>
+        <Link
+          href={"/Services/Inventory-Management-System"}
+          className="link link-hover"
+        >
+          Inventory Management
+        </Link>
+        <Link href={"/Services/Sales-Analytics"} className="link link-hover">
+          Sales Analytics
+        </Link>
+        <Link href={"/Services/Business-Advisory"} className="link link-hover">
+          Accounting System Solutions
+        </Link>
+        <Link href={"/Services/Training"} className="link link-hover">
+          Training
+        </Link>
       </nav>
       <nav>
         <h6 className="footer-title">Company</h6>
-        <a className="link link-hover">About us</a>
-        <a className="link link-hover">Contact</a>
-        <a className="link link-hover">Jobs</a>
-        <a className="link link-hover">Press kit</a>
+        <Link href={"/academy/data-entry"} className="link link-hover">
+          Academy
+        </Link>
+        <Link
+          href={"/academy/accounting-software-training"}
+          className="link link-hover"
+        >
+          Accounting Software
+        </Link>
+        <Link
+          href={"/academy/property-management-system"}
+          className="link link-hover"
+        >
+          Hotel Property Management
+        </Link>
+        <Link
+          href={"/academy/hospitality-accounting-diploma"}
+          className="link link-hover"
+        >
+          Hospitality Accounting
+        </Link>
+        <Link
+          href={"/academy/adv-diploma-in-hospitality-accounting"}
+          className="link link-hover"
+        >
+          Hotel Property Management
+        </Link>{" "}
       </nav>
       <nav>
-        <h6 className="footer-title">Legal</h6>
-        <a className="link link-hover">Terms of use</a>
-        <a className="link link-hover">Privacy policy</a>
-        <a className="link link-hover">Cookie policy</a>
+        <h6 className="footer-title">Socials</h6>
+
+        <div className="flex space-x-3">
+          <a
+            target="_blank"
+            href="https://www.instagram.com/hoggsolution/profilecard/?igsh=MTY0Y28xazN3bmQ5Zg=="
+          >
+            <IconBrandInstagram size={35} />
+          </a>
+
+          <a href="mailto:hoggandersonbiz@gmail.com?subject=Inquiry&body=Hello,%0AI would like more information about your services.">
+            <IconMail size={35} />
+          </a>
+
+          <a target="_blank" href={"https://wa.link/54pg2j"}>
+            <IconBrandWhatsapp size={35} />
+          </a>
+        </div>
       </nav>
     </footer>
   );

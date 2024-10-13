@@ -45,7 +45,7 @@ const DataEntryAcademyPage = () => {
             Start a Hustle, Find a Job, Freelance Your Skills, Grow Your
             Business
           </p>
-          <button className="btn btn-ghost bg-orange border-none mt-8 px-8 text-white text-lg">
+          <button className="btn btn-ghost bg-blue border-none mt-8 px-8 text-white text-lg">
             Enroll Now
           </button>
         </div>

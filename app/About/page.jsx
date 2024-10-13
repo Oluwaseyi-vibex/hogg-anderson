@@ -215,9 +215,13 @@ const About = () => {
             </p>
           </div>
           <p>
-            <Link className="italic underline text-[#4169e1]" href={"#"}>
+            <a
+              target="_blank"
+              href={"https://wa.link/54pg2j"}
+              className="link link-hover text-blue italic"
+            >
               Book a consultation
-            </Link>{" "}
+            </a>{" "}
             with our team today and let’s discuss how we can help your business
             grow.
           </p>

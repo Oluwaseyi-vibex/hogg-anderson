@@ -1,9 +1,10 @@
 import Image from "next/image";
 import React from "react";
 import { lexendPeta, poppins } from "@/utils/font/fonts";
-const ServicesCard = ({ img, title, description }) => {
+import { NavLink } from "@mantine/core";
+const ServicesCard = ({ img, title, description, link }) => {
   return (
-    <div className="w-[350px] flex flex-col gap-2">
+    <div className="w-[350px] space-y-5 flex flex-col gap-2">
       <div
         style={{
           backgroundImage: `url(${img})`,
@@ -18,7 +19,11 @@ const ServicesCard = ({ img, title, description }) => {
           {description}
         </p>
       </div>
-      <button className="btn bg-blue text-white">Read more</button>
+      <NavLink href={link}>
+        <button className="btn bg-blue border-none shadow-md text-white">
+          Read more
+        </button>
+      </NavLink>
     </div>
   );
 };

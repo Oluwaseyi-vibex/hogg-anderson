@@ -34,7 +34,9 @@ const BusinessAdvisory = () => {
           <p className={`font-extralight text-sm `}>
             We would love to hear from you
           </p>
-          <Button className={`w-full min-w-full`}>Contact Us Now</Button>
+          <Link href="/getInTouch">
+            <Button className={`w-full min-w-full`}>Contact Us Now</Button>
+          </Link>{" "}
         </div>
       </div>
 

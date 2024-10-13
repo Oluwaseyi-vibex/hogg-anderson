@@ -1,14 +1,15 @@
 "use client";
 import { Colors } from "@/utils/font/color";
 import { poppins } from "@/utils/font/fonts";
-import { Button, Image, List } from "@mantine/core";
+import { Button, List } from "@mantine/core";
 import { IconCheckbox } from "@tabler/icons-react";
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
 const AccountingServices = () => {
   return (
-    <div className={`${poppins.className} h-full mx-4 md:mx-10 md:my-8`}>
+    <div className={`${poppins.className} h-full mx-4 md:mx-24 md:my-8`}>
       <div className="text-[#F5F5F5]/80 bg-[#333333] sticky top-0 py-2 flex items-center gap-4 text-sm">
         <p className="cursor-pointer">Home</p>
         <div className={`text-[${Colors.blue}] text-xs`}>{`>`}</div>{" "}
@@ -20,8 +21,14 @@ const AccountingServices = () => {
           Accounting Services
         </Link>
       </div>
-      <div className="my-5 w-full flex md:flex-row flex-col gap-7">
-        <Image alt="" src={"/financial-accuracy.png"} w={"500px"} h={"400px"} />
+      <div className="my-5 w-full flex md:flex-row flex-col gap-7 md:gap-16">
+        <Image
+          alt=""
+          src={"/financial-accuracy.png"}
+          width={800}
+          className="md:w-[60%] w-full h-full md:h-[600px]"
+          height={700}
+        />
         <div
           className={`p-8 h-fit w-fit flex flex-col gap-3 text-[${Colors.white}] bg-[${Colors.blue}]`}
         >
@@ -29,7 +36,9 @@ const AccountingServices = () => {
           <p className={`font-extralight text-sm `}>
             We would love to hear from you
           </p>
-          <Button className={`w-full min-w-full`}>Contact Us Now</Button>
+          <Link href="/getInTouch">
+            <Button className={`w-full min-w-full`}>Contact Us Now</Button>
+          </Link>
         </div>
       </div>
 

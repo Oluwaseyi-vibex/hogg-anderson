@@ -1,31 +1,30 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { NavBar } from "..";
+import Link from "next/link";
 
 const services = [
   {
-    title: "Advanced Hospitality Accounting",
+    title: "Payroll & tax accounting.",
     description:
-      "Master the intricacies of accounting specific to hotels, restaurants, and lounges.",
+      "Manage payroll effortlessly with accurate salary computations, tax filings, and compliance tracking. Ensure your business stays ahead of payroll obligations with timely submissions and optimized deductions.",
     background: "url('/hero1.jpg')",
+    link: "/Services/Accounting-Services",
   },
   {
-    title: "Food & Beverage Cost Management",
+    title: "Hospitality Accounting System",
     description:
-      "Learn how to manage F&B inventory, cost of goods sold, and key performance indicators.",
+      "Streamline financial operations with a tailored accounting system designed specifically for hotels and restaurants. Track revenue, expenses, and KPIs while maintaining compliance with industry standards like USALI.",
     background: "url('/blog1.jpg')",
+    link: "/academy/hospitality-accounting-diploma",
   },
+
   {
-    title: "Payroll & Tax Accounting",
+    title: "Inventory Management System",
     description:
-      "Efficiently handle payroll, tax filing, and compliance with industry regulations.",
-    background: "url('/hero3.jpg')",
-  },
-  {
-    title: "Financial Reporting for Hospitality",
-    description:
-      "Understand USALI-compliant financial reports, balance sheets, and income statements.",
+      "Take control of your inventory with real-time tracking and forecasting. Minimize stockouts and overstocking, streamline procurement, and generate detailed reports for informed decision-making.",
     background: "url('/investor-confidence.jpg')",
+    link: "/Services/Inventory-Management-System",
   },
 ];
 
@@ -54,9 +53,12 @@ const HeroSection = () => {
         <p className="text-lg text-white mb-6">
           {services[activeService].description}
         </p>
-        <button className="btn btn-ghost bg-blue text-white px-6 hover:text-bg hover:border-2 hover:border-blue text-lg">
-          Learn More
-        </button>
+        <Link href={services[activeService].link}>
+          {" "}
+          <button className="btn btn-ghost bg-blue text-white px-6 hover:text-bg hover:border-2 hover:border-blue text-lg">
+            Learn More
+          </button>
+        </Link>
       </div>
     </div>
   );
