@@ -26,7 +26,7 @@ const SplashScreen = ({ setLoading }) => {
   }, [setLoading]);
 
   return (
-    <div className="fixed inset-0 bg-blue flex items-center  justify-center z-50">
+    <div className="fixed inset-0 bg-blue flex items-center fle  justify-center z-50">
       <Image
         src={"/logo.png"}
         alt="logo"

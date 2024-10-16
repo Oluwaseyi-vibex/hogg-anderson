@@ -12,9 +12,44 @@ import TestimonialCarousel from "@/components/testimonialCarousel";
 import HeroCarousel from "@/components/hero";
 import Link from "next/link";
 
+// GSAP ANIMATIONS /////////////////////////////////////////////
+import { useRef } from "react";
+import { gsap } from "gsap";
+
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+import { useGSAP } from "@gsap/react";
+
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+
 export default function Home() {
+  const servicesHeader = useRef(null);
+
+  const servicesHeaderAnime = () => {
+    gsap.to(servicesHeader.current, {
+      duration: 1,
+      ease: "power4.out",
+
+      text: {
+        value: "High-impact Services",
+        // newClass: "class2",
+        delimiter: "",
+        padSpace: true,
+      },
+
+      scrollTrigger: {
+        trigger: servicesHeader.current,
+        // toggleActions: "restart",
+      },
+    });
+  };
+
+  useGSAP(() => {
+    servicesHeaderAnime();
+  });
+
   return (
-    <div className={`${poppins.className} w-full   `}>
+    <div className={`${poppins.className} w-full`}>
       {/* <main className="flex w-full items-start  justify-end"> */}
       {/* <div className="flex flex-col gap-3 w-full">
           <p className="rounded-full shadow-md shadow-black cursor-pointer font-light border-white border-[0.5px] w-fit bg-transparent py-1 px-8 text-sm text-[#4169E1]">
@@ -54,10 +89,10 @@ export default function Home() {
       <HeroCarousel />
       {/* </main> */}
 
-      <div className="w-full  flex md:flex-row flex-col space-y-8 py-12 md:py-24 md:px-16 text-black bg-[#F5F5F5] h-full rounded-b-3xl ">
+      <div className="w-full bg-[url('/wave2.svg')] bg-cover bg-center flex md:flex-row flex-col space-y-8 py-12 md:py-24 md:px-16 text-bg bg-[#F5F5F5] h-full rounded-b-3xl ">
         <div className="flex md:w-[30%] px-4 h-full flex-col gap-2 md:gap-6">
-          <h1 className="text-4xl font-semibold ">
-            High-impact <br /> Services
+          <h1 ref={servicesHeader} className="text-4xl font-semibold ">
+            High-impact Services
           </h1>
           <p className=" [#E1B6CA] text-sm font-light">
             We assist public and private company clients in reaching their

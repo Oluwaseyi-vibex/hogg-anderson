@@ -1,7 +1,9 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { NavBar } from "..";
 import Link from "next/link";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 
 const services = [
   {
@@ -39,14 +41,24 @@ const HeroSection = () => {
     return () => clearInterval(interval); // Cleanup the interval on unmount
   }, []);
 
+  const heroRef = useRef(null); // Ref for the section we want to animate
+
+  useEffect(() => {
+    gsap.fromTo(
+      heroRef.current,
+      { y: -100, opacity: 0 }, // Initial position: 100px above the screen
+      { y: 0, opacity: 1, duration: 1.5, ease: "power3.out" } // Final position: In place, fully visible
+    );
+  }, [activeService]); // Re-run animation when active service changes
   return (
     <div
-      className="h-screen w-full flex flex-col justify-center py-40 items-center bg-cover bg-center transition-all duration-700"
+      className="h-screen w-full flex flex-col  justify-center py-40 items-center bg-cover bg-center transition-all duration-700"
       style={{
         backgroundImage: services[activeService].background,
       }}
     >
-      <div className="text-center w-full text-blue  p-4 rounded-lg max-w-2xl">
+      <div className="absolute bg-black opacity-40 w-full h-screen  z-0"></div>
+      <div className="text-center w-full text-blue  p-4 rounded-lg relative z-20 max-w-2xl">
         <h1 className="md:text-7xl text-4xl font-bold mb-4">
           {services[activeService].title}
         </h1>
