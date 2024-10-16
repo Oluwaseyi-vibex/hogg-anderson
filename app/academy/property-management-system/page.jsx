@@ -18,9 +18,12 @@ const OperaPMSPage = () => {
             Master OPERA PMS, the world&apos;s leading Property Management
             System for hotels.
           </p>
-          <button className="btn btn-ghost bg-blue border-none mt-8 px-8 text-white text-lg">
-            Enroll Now
-          </button>
+
+          <a target="_blank" href={"https://wa.link/54pg2j"}>
+            <button className="btn btn-ghost bg-blue border-none mt-8 px-8 text-white text-lg">
+              Enroll Now
+            </button>
+          </a>
         </div>
       </section>
 
@@ -64,7 +67,6 @@ const OperaPMSPage = () => {
           <h2 className="text-4xl font-bold text-center text-blue mb-12">
             Courses
           </h2>
-
           <div className="w-full flex flex-col gap-6">
             <div className="collapse w-full text-left text-xl font-semibold text-blue bg-gray-700 h-full rounded-lg">
               <input type="radio" name="my-accordion-1" defaultChecked />
@@ -146,6 +148,10 @@ const OperaPMSPage = () => {
                 </ul>
               </div>
             </div>
+          </div>
+
+          <div className=" bg-gray-600   rounded-md mt-5 p-4 text-xl">
+            <p className=" text-white font-bold">Pricing: 100,000 naira only</p>{" "}
           </div>
         </section>
 

@@ -1,10 +1,12 @@
+"use client";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
 import { lexendPeta, poppins } from "@/utils/font/fonts";
 import { NavLink } from "@mantine/core";
+import Link from "next/link";
 const ServicesCard = ({ img, title, description, link }) => {
   return (
-    <div className="w-[350px] space-y-5 flex flex-col gap-2">
+    <div className="w-[350px] space-y-6 flex flex-col gap-2">
       <div
         style={{
           backgroundImage: `url(${img})`,
@@ -19,11 +21,11 @@ const ServicesCard = ({ img, title, description, link }) => {
           {description}
         </p>
       </div>
-      <NavLink href={link}>
+      <Link href={link}>
         <button className="btn bg-blue border-none shadow-md text-white">
           Read more
         </button>
-      </NavLink>
+      </Link>
     </div>
   );
 };

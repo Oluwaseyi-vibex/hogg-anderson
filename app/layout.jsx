@@ -18,7 +18,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`bg-[#333333] w-full h-full antialiased`}>
+      <body
+        className={`${poppins.className} bg-[#333333] w-full h-full antialiased`}
+      >
         <MantineProvider>
           <NavBar />
           {children}

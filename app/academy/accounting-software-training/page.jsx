@@ -167,12 +167,14 @@ const NewAcademyPageDaisy = () => {
                 Duration: {course.duration}
               </p>
               <p className="mt-4 text-white font-bold">
-                Pricing: 25,000 naira only
+                Pricing: 30,000 naira only
               </p>
 
-              <button className="btn mt-4 group-hover:bg-bg btn-ghost text-base bg-blue">
-                Register
-              </button>
+              <a target="_blank" href={"https://wa.link/54pg2j"}>
+                <button className="btn mt-4 group-hover:bg-bg btn-ghost text-base bg-blue">
+                  Enroll Now
+                </button>
+              </a>
             </div>
           ))}
         </div>
@@ -190,9 +192,12 @@ const NewAcademyPageDaisy = () => {
           Accounting Software Solutions. Contact us at 08029514484 to enroll or
           learn more about our training programs.
         </p>
-        <button className="btn btn-blue mt-8 text-white hover:bg-blue/90 bg-blue border-none text-lg">
-          Sign Up Now
-        </button>
+
+        <a target="_blank" href={"https://wa.link/54pg2j"}>
+          <button className="btn btn-blue mt-8 text-white hover:bg-blue/90 bg-blue border-none text-lg">
+            Enroll Now
+          </button>
+        </a>
       </section>
     </div>
   );

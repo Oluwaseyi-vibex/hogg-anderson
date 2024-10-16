@@ -45,9 +45,12 @@ const DataEntryAcademyPage = () => {
             Start a Hustle, Find a Job, Freelance Your Skills, Grow Your
             Business
           </p>
-          <button className="btn btn-ghost bg-blue border-none mt-8 px-8 text-white text-lg">
-            Enroll Now
-          </button>
+
+          <a target="_blank" href={"https://wa.link/54pg2j"}>
+            <button className="btn btn-ghost bg-blue border-none mt-8 px-8 text-white text-lg">
+              Enroll Now
+            </button>
+          </a>
         </div>
       </section>
 
@@ -288,7 +291,7 @@ const DataEntryAcademyPage = () => {
           skills.
         </p>
         <a
-          href="https://accountinghub.ng/paydataentryacademy"
+          href="/"
           className="inline-block px-8 py-3 bg-blue text-blue-600 font-semibold rounded-lg hover:bg-gray-100"
         >
           Join the Academy

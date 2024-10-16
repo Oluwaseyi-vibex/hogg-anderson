@@ -262,7 +262,7 @@ const NavBar = () => {
               </div>
               <ul
                 tabIndex={0}
-                className="dropdown-content menu bg-orange text-bg mt-2 shadow-sm  shadow-black z-[1] w-60 p-2 "
+                className="dropdown-content menu bg-orange text-bg mt-2 shadow-lg border-none  shadow-black z-[1] w-60 p-2 "
               >
                 <li>
                   <Link href={"/Services/Accounting-Services"}>
@@ -304,7 +304,7 @@ const NavBar = () => {
               </div>
               <ul
                 tabIndex={0}
-                className="dropdown-content menu bg-orange text-bg z-[1] w-56 p-2 shadow"
+                className="dropdown-content menu bg-orange text-bg z-[1] w-56 p-2 shadow-lg mt-2"
               >
                 <li>
                   <Link href={"/academy/data-entry"}>Data Entry Academy</Link>
