@@ -151,7 +151,7 @@ const OperaPMSPage = () => {
           </div>
 
           <div className=" bg-gray-600   rounded-md mt-5 p-4 text-xl">
-            <p className=" text-white font-bold">Pricing: 100,000 naira only</p>{" "}
+            <p className=" text-white font-bold">Pricing: 100,000 naira only</p>
           </div>
         </section>
 
