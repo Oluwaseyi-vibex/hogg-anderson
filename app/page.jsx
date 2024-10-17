@@ -22,31 +22,60 @@ import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
+import { TextPlugin } from "gsap/TextPlugin"; // Import TextPlugin
+
+gsap.registerPlugin(TextPlugin);
+
 export default function Home() {
-  const servicesHeader = useRef(null);
-
-  const servicesHeaderAnime = () => {
-    gsap.to(servicesHeader.current, {
-      duration: 1,
-      ease: "power4.out",
-
-      text: {
-        value: "High-impact Services",
-        // newClass: "class2",
-        delimiter: "",
-        padSpace: true,
-      },
-
-      scrollTrigger: {
-        trigger: servicesHeader.current,
-        // toggleActions: "restart",
-      },
-    });
-  };
+  const headingRef = useRef(null); // Create a ref for the <h1>
+  const paragraphRef = useRef(null); // Reference to the <p> element
+  const buttonRef = useRef(null); // Create a ref for animation
 
   useGSAP(() => {
-    servicesHeaderAnime();
-  });
+    // Animate the <h1> text content
+    gsap.to(headingRef.current, {
+      duration: 2,
+      text: "High-impact Services",
+      ease: "none",
+      scrollTrigger: {
+        trigger: headingRef.current, // Trigger animation when this element enters the viewport
+        start: "top 80%", // Trigger when the top of the element reaches 80% of the viewport
+        toggleActions: "play none none none", // Play animation on enter
+      },
+    });
+
+    gsap.fromTo(
+      paragraphRef.current,
+      { y: 40, opacity: 0 },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: paragraphRef.current, // Trigger animation when this element enters the viewport
+          start: "top 80%", // Trigger when the top of the element reaches 80% of the viewport
+          toggleActions: "play none none none", // Play animation on enter
+        },
+      }
+    );
+
+    gsap.fromTo(
+      buttonRef.current,
+      { y: 40, opacity: 0 },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: buttonRef.current, // Trigger animation when this element enters the viewport
+          start: "top 80%", // Trigger when the top of the element reaches 80% of the viewport
+          toggleActions: "play none none none", // Play animation on enter
+        },
+      }
+    );
+  }, []); // Empty dependency array to run once on mount
 
   return (
     <div className={`${poppins.className} w-full`}>
@@ -91,10 +120,10 @@ export default function Home() {
 
       <div className="w-full bg-[url('/wave2.svg')] bg-cover bg-center flex md:flex-row flex-col space-y-8 py-12 md:py-24 md:px-16 text-bg bg-[#F5F5F5] h-full rounded-b-3xl ">
         <div className="flex md:w-[30%] px-4 h-full flex-col gap-2 md:gap-6">
-          <h1 ref={servicesHeader} className="text-4xl font-semibold ">
-            High-impact Services
+          <h1 ref={headingRef} className="text-4xl font-semibold ">
+            Bringing to you
           </h1>
-          <p className=" [#E1B6CA] text-sm font-light">
+          <p ref={paragraphRef} className=" [#E1B6CA] text-sm font-light">
             We assist public and private company clients in reaching their
             objectives through audit, tax, advisory, risk and performance
             services.
@@ -102,6 +131,7 @@ export default function Home() {
 
           <Link href={"/getInTouch"}>
             <Button
+              ref={buttonRef} // Attach ref to the button for GSAP animation
               rightSection={<IconArrowRight size={20} />}
               variant="gradient"
               bg={"#4169E1"}

@@ -59,14 +59,13 @@ const HeroSection = () => {
     >
       <div className="absolute bg-black opacity-40 w-full h-screen  z-0"></div>
       <div className="text-center w-full text-blue  p-4 rounded-lg relative z-20 max-w-2xl">
-        <h1 className="md:text-7xl text-4xl font-bold mb-4">
+        <h1 ref={heroRef} className="md:text-7xl text-4xl font-bold mb-4">
           {services[activeService].title}
         </h1>
         <p className="text-lg text-white mb-6">
           {services[activeService].description}
         </p>
         <Link href={services[activeService].link}>
-          {" "}
           <button className="btn btn-ghost bg-blue text-white px-6 hover:text-bg hover:border-2 hover:border-blue text-lg">
             Learn More
           </button>

@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useRef } from "react";
 import Link from "next/link";
 import { lexendPeta, poppins } from "@/utils/font/fonts";
 import { Button, Drawer } from "@mantine/core";
@@ -8,13 +8,31 @@ import { useDisclosure } from "@mantine/hooks";
 import { Burger } from "@mantine/core";
 import Image from "next/image";
 import { Colors } from "@/utils/font/color";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 const NavBar = () => {
   const [opened, { open, close }] = useDisclosure(false);
+  const navRef = useRef(null);
 
+  useGSAP(() => {
+    gsap.fromTo(
+      navRef.current,
+      {
+        opacity: 0,
+        y: -100,
+      },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1,
+      }
+    );
+  });
   return (
     <div
-      className={`${poppins.className} sticky top-0  z-50 w-full md:px-16 p-5 flex items-center justify-center navbar font-semibold  py-6  bg-[#333333] text-[#F5F5F5]`}
+      ref={navRef}
+      className={`${poppins.className} sticky top-0  z-50 w-full md:px-16 p-4 flex items-center  shadow-orange shadow-md  justify-center navbar font-semibold  py-6  bg-[#333333] text-[#F5F5F5]`}
     >
       <div className=" md:flex-row  md:justify-start justify-between flex-row-reverse">
         <div className="dropdown">
