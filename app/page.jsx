@@ -30,17 +30,21 @@ export default function Home() {
   const headingRef = useRef(null); // Create a ref for the <h1>
   const paragraphRef = useRef(null); // Reference to the <p> element
   const buttonRef = useRef(null); // Create a ref for animation
+  const sectionRef = useRef(null); // Reference to the section
 
   useGSAP(() => {
     // Animate the <h1> text content
     gsap.to(headingRef.current, {
-      duration: 2,
+      duration: 1,
       text: "High-impact Services",
       ease: "none",
       scrollTrigger: {
         trigger: headingRef.current, // Trigger animation when this element enters the viewport
         start: "top 80%", // Trigger when the top of the element reaches 80% of the viewport
+        end: "bottom 50%", // End the animation when the bottom of the element reaches
         toggleActions: "play none none none", // Play animation on enter
+        scrub: true,
+        // markers: true,
       },
     });
 
@@ -55,30 +59,66 @@ export default function Home() {
         scrollTrigger: {
           trigger: paragraphRef.current, // Trigger animation when this element enters the viewport
           start: "top 80%", // Trigger when the top of the element reaches 80% of the viewport
+          end: "bottom 50%", // End the animation when the bottom of the element reaches
           toggleActions: "play none none none", // Play animation on enter
+          scrub: true,
+          // markers: true,
         },
       }
     );
 
     gsap.fromTo(
       buttonRef.current,
-      { y: 40, opacity: 0 },
+      { x: -50, opacity: 0 },
       {
-        y: 0,
+        x: 0,
         opacity: 1,
         duration: 1,
         ease: "power3.out",
         scrollTrigger: {
           trigger: buttonRef.current, // Trigger animation when this element enters the viewport
           start: "top 80%", // Trigger when the top of the element reaches 80% of the viewport
+          end: "bottom 50%", // End the animation when the bottom of the element reaches
           toggleActions: "play none none none", // Play animation on enter
+          scrub: true,
+          // markers: true,
         },
       }
     );
+
+    const ctx = gsap.context(() => {
+      // Create GSAP animation timeline for image and text
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: sectionRef.current, // Start animation when section enters viewport
+          start: "top 50%",
+          scrub: true,
+          end: "bottom 20%", // End when bottom of section reaches 20%
+          toggleActions: "play none none none", // Replay on every scroll-in
+        },
+      });
+
+      // Animate image from the left
+      tl.fromTo(
+        sectionRef.current.querySelector("img"),
+        { x: -100, opacity: 0 }, // Start 100px left and invisible
+        { x: 0, opacity: 1, duration: 1.5, ease: "power3.out" } // Slide in and fade in
+      )
+        // Animate text content from the right
+        .fromTo(
+          sectionRef.current.querySelector("div"),
+          { x: 100, opacity: 0 },
+          { x: 0, opacity: 1, duration: 1.5, ease: "power3.out" },
+          "<0.2" // Slight overlap with the image animation
+        );
+    }, sectionRef);
+
+    // Cleanup on unmount
+    return () => ctx.revert();
   }, []); // Empty dependency array to run once on mount
 
   return (
-    <div className={`${poppins.className} w-full`}>
+    <div className={`${poppins.className} w-full overflow-hidden`}>
       {/* <main className="flex w-full items-start  justify-end"> */}
       {/* <div className="flex flex-col gap-3 w-full">
           <p className="rounded-full shadow-md shadow-black cursor-pointer font-light border-white border-[0.5px] w-fit bg-transparent py-1 px-8 text-sm text-[#4169E1]">
@@ -210,15 +250,20 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="w-full md:px-4 md:mt-36 mb-20 md:mb-0 gap-6 md:gap-0 mt-16 flex md:flex-row flex-col">
+      <div
+        ref={sectionRef} // Attach ref to section for GSAP animations
+        className="w-full md:px-4 md:mt-36 mb-20 md:mb-0 gap-6 md:gap-0 mt-16 flex md:flex-row flex-col"
+      >
+        {/* Image */}
         <Image
           alt=""
           src={"/aboutsection.jpg"}
           width={1000}
           height={150}
-          className="md:w-[50%]  md:h-[60%] md:rounded-xl"
+          className="md:w-[50%] md:h-[60%] md:rounded-xl"
         />
 
+        {/* Text Content */}
         <div className="md:w-[50%] px-4 md:pl-28 flex flex-col gap-5 md:gap-10">
           <h1 className="text-4xl text-[#F5F5F5] font-bold">
             The story behind our company

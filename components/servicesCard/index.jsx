@@ -16,8 +16,8 @@ const ServicesCard = ({ img, title, description, link }) => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: cardRef.current, // Trigger when this card enters the viewport
-        start: "top 80%", // Start when the card's top reaches 80% of the viewport
-        end: "bottom 20%", // End when bottom reaches 20%
+        start: "top 80%", // Trigger when the top of the element reaches 80% of the viewport
+        end: "bottom 50%",
         scrub: true, // No scrubbing (play naturally)
         toggleActions: "play none none none", // Replay on each scroll-in
       },
