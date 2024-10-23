@@ -60,10 +60,16 @@ const ServicesCard = ({ img, title, description, link }) => {
       className="w-[350px] space-y-6 flex flex-col gap-2 transition-all"
     >
       {/* Image */}
-      <Image src={img} alt="image" width={350} height={200} />
+      <Image
+        src={img}
+        alt="image"
+        className="h-[200px] "
+        width={350}
+        height={200}
+      />
 
       {/* Text Content */}
-      <div className="w-full h-[130px] flex flex-col gap-1 transition-all ease-in duration-300">
+      <div className="w-full h-[130px] flex flex-col gap-1 text-bg transition-all ease-in duration-300">
         <h1 className="text-2xl font-medium">{title}</h1>
         <p className="text-sm text-black font-light">{description}</p>
       </div>

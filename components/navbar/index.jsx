@@ -32,7 +32,7 @@ const NavBar = () => {
   return (
     <div
       ref={navRef}
-      className={`${poppins.className} sticky top-0  z-50 w-full md:px-16 p-4 flex items-center  shadow-bg/65 shadow-md  justify-center navbar font-semibold  py-6  bg-[#333333] text-[#F5F5F5]`}
+      className={`${poppins.className} sticky top-0  z-50 w-full md:px-16 px-4 py-4 md:py-6  flex items-center  shadow-bg/65 shadow-md  justify-center navbar font-semibold  bg-[#333333] text-[#F5F5F5]`}
     >
       <div className=" md:flex-row  md:justify-start justify-between flex-row-reverse">
         <div className="dropdown">
@@ -233,20 +233,6 @@ const NavBar = () => {
                     </Link>
                   </li>
                 </ul>
-
-                <Button
-                  rightSection={<IconArrowRight size={20} />}
-                  variant="gradient"
-                  // gradient={{ deg: 133, from: "pink", to: "black" }}
-                  size="xl"
-                  bg={Colors.blue}
-                  radius="md"
-                  mt="xs"
-                  justify="space-between"
-                  w={250}
-                >
-                  Get started
-                </Button>
               </div>
             </Drawer>
           </div>
@@ -259,7 +245,7 @@ const NavBar = () => {
             alt="logo"
             width={500}
             height={500}
-            className="w-[40%] md:w-[40%]"
+            className="w-[40%] md:w-[20%]"
           />
         </Link>
       </div>
@@ -360,7 +346,7 @@ const NavBar = () => {
         </ul>
       </div>
 
-      <div className="navbar-end md:flex hidden">
+      {/* <div className="navbar-end md:flex hidden">
         <Button
           variant="gradient"
           bg={"#4169E1"}
@@ -372,7 +358,7 @@ const NavBar = () => {
         >
           Get started
         </Button>
-      </div>
+      </div> */}
     </div>
   );
 };
