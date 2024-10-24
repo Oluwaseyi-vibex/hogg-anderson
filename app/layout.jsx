@@ -14,7 +14,6 @@ import SplashScreen from "@/components/SplashScreen";
 
 export default function RootLayout({ children }) {
   const [loading, setLoading] = useState(true);
-
   useEffect(() => {
     const timer = setTimeout(() => setLoading(false), 4000);
     return () => clearTimeout(timer);
