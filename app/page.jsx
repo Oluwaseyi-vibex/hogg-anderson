@@ -215,7 +215,7 @@ export default function Home() {
               title={"Sales Analytics"}
               imgWidth={"35%"}
               description={
-                "Our sales analytics service aims to empower restaurants by providing actionable insights based on weekly sales data. By identifying top-selling items and underperforming products, we enable informed decision-making and strategic planning."
+                "Our Sales Analytics services provide you with deep insights into your sales performance, enabling you to make informed decisions that propel your business forward."
               }
               link={"/Services/Sales-Analytics"}
             />
@@ -223,7 +223,7 @@ export default function Home() {
               img={"/person-office.jpg"}
               title={"Accounting System"}
               description={
-                "Identifying and reconciling variances is crucial. We analyze discrepancies between actual and expected costs, providing actionable insights to improve efficiency."
+                "We provide cutting-edge accounting system solutions tailored to meet the specific needs of your business. Whether you're a small startup or an established enterprise, our technology-driven..."
               }
               link={"/Services/Accounting-System"}
             />
@@ -234,7 +234,7 @@ export default function Home() {
               img={"/startup-colleagues-reviewing.jpg"}
               title={"Business Advisory"}
               description={
-                "Keep an eye on your inventory turnover ratio to identify slow-moving items and make informed decisions about reordering and promotions."
+                "We offer Business Advisory services designed to support the long-term success of your business. We don’t just deliver financial advice; we act as a trusted partner, helping..."
               }
               link={"/Services/Business-Advisory"}
             />
@@ -242,7 +242,7 @@ export default function Home() {
               img={"/investor-confidence.jpg"}
               title={"Training"}
               description={
-                "Our customized stock movement reports track inventory flow, highlight trends, and identify slow-moving items of food and beverages. This aids in inventory management and decision-making."
+                "Our training programs are customized to meet the unique needs of your organization, whether it's in accounting, financial management, inventory control, or general business operations. We empower your team with..."
               }
               link={"/Services/Training"}
             />
