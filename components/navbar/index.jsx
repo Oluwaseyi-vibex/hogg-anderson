@@ -32,7 +32,7 @@ const NavBar = () => {
   return (
     <div
       ref={navRef}
-      className={`${poppins.className} sticky top-0  z-50 w-full md:px-16 px-4 py-4 md:py-6  flex items-center  shadow-bg/65 shadow-md  justify-center navbar font-semibold  bg-[#333333] text-[#F5F5F5]`}
+      className={`${poppins.className} sticky top-0 opacity-25   z-50 w-full md:px-16 px-4 py-4 md:py-6  flex items-center  shadow-bg/65 shadow-md  justify-center navbar font-semibold  bg-[#333333] text-[#F5F5F5]`}
     >
       <div className=" md:flex-row  md:justify-start justify-between flex-row-reverse">
         <div className="dropdown">
@@ -106,7 +106,7 @@ const NavBar = () => {
                       Home
                     </Link>
                   </li>
-                  <li>
+                  {/* <li>
                     <Link onClick={close} href="/About">
                       About
                     </Link>
@@ -231,7 +231,7 @@ const NavBar = () => {
                     <Link onClick={close} href="/getInTouch">
                       Contact
                     </Link>
-                  </li>
+                  </li> */}
                 </ul>
               </div>
             </Drawer>
@@ -251,7 +251,7 @@ const NavBar = () => {
       </div>
 
       {/* desktop nav */}
-      <div className="navbar-center hidden lg:flex">
+      {/* <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal text-base px-1">
           <li>
             <Link href="/">Home</Link>
@@ -344,7 +344,7 @@ const NavBar = () => {
             <Link href="/getInTouch">Contact</Link>
           </li>
         </ul>
-      </div>
+      </div> */}
 
       {/* <div className="navbar-end md:flex hidden">
         <Button

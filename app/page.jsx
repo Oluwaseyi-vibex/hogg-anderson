@@ -23,6 +23,7 @@ import { useGSAP } from "@gsap/react";
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 import { TextPlugin } from "gsap/TextPlugin"; // Import TextPlugin
+import Pricing from "@/components/pricing";
 
 gsap.registerPlugin(TextPlugin);
 
@@ -86,35 +87,35 @@ export default function Home() {
       }
     );
 
-    const ctx = gsap.context(() => {
-      // Create GSAP animation timeline for image and text
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: sectionRef.current, // Start animation when section enters viewport
-          start: "top 50%",
-          scrub: true,
-          end: "bottom 20%", // End when bottom of section reaches 20%
-          toggleActions: "play none none none", // Replay on every scroll-in
-        },
-      });
+    // const ctx = gsap.context(() => {
+    //   // Create GSAP animation timeline for image and text
+    //   const tl = gsap.timeline({
+    //     scrollTrigger: {
+    //       trigger: sectionRef.current, // Start animation when section enters viewport
+    //       start: "top 50%",
+    //       scrub: true,
+    //       end: "bottom 20%", // End when bottom of section reaches 20%
+    //       toggleActions: "play none none none", // Replay on every scroll-in
+    //     },
+    //   });
 
-      // Animate image from the left
-      tl.fromTo(
-        sectionRef.current.querySelector("img"),
-        { x: -100, opacity: 0 }, // Start 100px left and invisible
-        { x: 0, opacity: 1, duration: 1.5, ease: "power3.out" } // Slide in and fade in
-      )
-        // Animate text content from the right
-        .fromTo(
-          sectionRef.current.querySelector("div"),
-          { x: 100, opacity: 0 },
-          { x: 0, opacity: 1, duration: 1.5, ease: "power3.out" },
-          "<0.2" // Slight overlap with the image animation
-        );
-    }, sectionRef);
+    //   // Animate image from the left
+    //   tl.fromTo(
+    //     sectionRef.current.querySelector("img"),
+    //     { x: -100, opacity: 0 }, // Start 100px left and invisible
+    //     { x: 0, opacity: 1, duration: 1.5, ease: "power3.out" } // Slide in and fade in
+    //   )
+    //     // Animate text content from the right
+    //     .fromTo(
+    //       sectionRef.current.querySelector("div"),
+    //       { x: 100, opacity: 0 },
+    //       { x: 0, opacity: 1, duration: 1.5, ease: "power3.out" },
+    //       "<0.2" // Slight overlap with the image animation
+    //     );
+    // }, sectionRef);
 
     // Cleanup on unmount
-    return () => ctx.revert();
+    // return () => ctx.revert();
   }, []); // Empty dependency array to run once on mount
 
   return (
@@ -163,10 +164,11 @@ export default function Home() {
           <h1 ref={headingRef} className="text-4xl font-semibold ">
             Bringing to you
           </h1>
-          <p ref={paragraphRef} className=" [#E1B6CA] text-sm font-light">
-            We assist public and private company clients in reaching their
-            objectives through audit, tax, advisory, risk and performance
-            services.
+          <p ref={paragraphRef} className=" text-sm font-light">
+            We empower public and private company clients to achieve their
+            business goals through expert bookkeeping, insightful management
+            reporting, streamlined payroll processing, and strategic tax
+            consulting services.
           </p>
 
           <Link href={"/getInTouch"}>
@@ -191,70 +193,50 @@ export default function Home() {
           <div className="flex md:flex-row flex-col gap-12">
             <ServicesCard
               img={"/financial-accuracy.png"}
-              title={"Accounting Services"}
+              title="Bookkeeping Outsourcing"
               imgWidth={`35%`}
               description={
-                "Whether you’re launching a startup or running an established business, Hogg Anderson Business Solutions Limited offers comprehensive bookkeeping and payroll solutions tailored to your needs. We provide..."
+                "Our expert bookkeeping services ensure accurate and compliant financial records. We handle income/expense tracking, bank reconciliations, accounts management, and financial statements, freeing you to focus on growth."
               }
-              link={"/Services/Accounting-Services"}
+              link={"/"}
             />
             <ServicesCard
               img={"/cost-control.jpg"}
-              title={"Inventory Management System"}
+              title={"Management Reporting"}
               imgWidth={`35%`}
               description={
-                "Conduct regular physical inventory counts to ensure that your records match the actual stock levels."
+                "Gain data-driven insights with our tailored reporting solutions. We provide monthly/quarterly reports, cash flow analysis, budgeting, and performance tracking to empower informed decision-making"
               }
-              link={"/Services/Inventory-Management-System"}
+              link={"/"}
             />
           </div>
 
           <div className="flex  md:flex-row flex-col gap-12">
             <ServicesCard
               img={"/office.jpg"}
-              title={"Sales Analytics"}
+              title={"Payroll Processing"}
               imgWidth={"35%"}
               description={
-                "Our Sales Analytics services provide you with deep insights into your sales performance, enabling you to make informed decisions that propel your business forward."
+                "Streamline payroll with our efficient solutions. We manage computations, statutory deductions, payslip generation, and compliance, ensuring accuracy and timely payments for your team."
               }
-              link={"/Services/Sales-Analytics"}
+              link={"/"}
             />
             <ServicesCard
               img={"/person-office.jpg"}
-              title={"Accounting System"}
+              title={"Tax Consulting"}
               description={
                 "We provide cutting-edge accounting system solutions tailored to meet the specific needs of your business. Whether you're a small startup or an established enterprise, our technology-driven..."
               }
-              link={"/Services/Accounting-System"}
-            />
-          </div>
-
-          <div className="flex  md:flex-row flex-col gap-12">
-            <ServicesCard
-              img={"/startup-colleagues-reviewing.jpg"}
-              title={"Business Advisory"}
-              description={
-                "We offer Business Advisory services designed to support the long-term success of your business. We don’t just deliver financial advice; we act as a trusted partner, helping..."
-              }
-              link={"/Services/Business-Advisory"}
-            />
-            <ServicesCard
-              img={"/investor-confidence.jpg"}
-              title={"Training"}
-              description={
-                "Our training programs are customized to meet the unique needs of your organization, whether it's in accounting, financial management, inventory control, or general business operations. We empower your team with..."
-              }
-              link={"/Services/Training"}
+              link={"/"}
             />
           </div>
         </div>
       </div>
 
-      <div
+      {/* <div
         ref={sectionRef} // Attach ref to section for GSAP animations
         className="w-full md:px-4 md:mt-36 mb-20 md:mb-0 gap-6 md:gap-0 mt-16 flex md:flex-row flex-col"
       >
-        {/* Image */}
         <Image
           alt=""
           src={"/aboutsection.jpg"}
@@ -263,7 +245,6 @@ export default function Home() {
           className="md:w-[50%] md:h-[60%] md:rounded-xl"
         />
 
-        {/* Text Content */}
         <div className="md:w-[50%] px-4 md:pl-28 flex flex-col gap-5 md:gap-10">
           <h1 className="text-4xl text-[#F5F5F5] font-bold">
             The story behind our company
@@ -285,9 +266,10 @@ export default function Home() {
             </button>
           </Link>
         </div>
-      </div>
+      </div> */}
+      <Pricing />
 
-      <FeaturesTitle />
+      {/* <FeaturesTitle /> */}
 
       <GetInTouch />
 

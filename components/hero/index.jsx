@@ -7,25 +7,33 @@ import { useGSAP } from "@gsap/react";
 
 const services = [
   {
-    title: "Payroll & tax accounting.",
+    title: "Bookkeeping Outsourcing",
     description:
-      "Manage payroll effortlessly with accurate salary computations, tax filings, and compliance tracking. Ensure your business stays ahead of payroll obligations with timely submissions and optimized deductions.",
+      "Keep your financial records accurate and compliant with our expert bookkeeping services. We handle income/expense tracking, bank reconciliations, accounts management, and financial statements, so you can focus on growing your business.",
     background: "url('/hero1.jpg')",
     link: "/Services/Accounting-Services",
   },
   {
-    title: "Hospitality Accounting System",
+    title: "Management Reporting",
     description:
-      "Streamline financial operations with a tailored accounting system designed specifically for hotels and restaurants. Track revenue, expenses, and KPIs while maintaining compliance with industry standards like USALI.",
+      "Make informed decisions with our data-driven reporting solutions. Get monthly and quarterly financial reports, cash flow analysis, budgeting, and performance tracking to drive your business forward.",
     background: "url('/blog1.jpg')",
     link: "/academy/hospitality-accounting-diploma",
   },
 
   {
-    title: "Inventory Management System",
+    title: "Payroll Processing",
     description:
-      "Take control of your inventory with real-time tracking and forecasting. Minimize stockouts and overstocking, streamline procurement, and generate detailed reports for informed decision-making.",
+      "Streamline payroll with accurate computations, statutory deductions, and timely payments. Our services include payslip generation, tax remittances, and employee benefits management for full compliance.",
     background: "url('/investor-confidence.jpg')",
+    link: "/Services/Inventory-Management-System",
+  },
+
+  {
+    title: "Tax Consulting",
+    description:
+      "Optimize your tax strategy with expert planning and compliance services. We handle VAT, corporate tax filings, regulatory compliance, and audit representation to minimize liabilities and maximize savings.",
+    background: "url('/blog1.jpg')",
     link: "/Services/Inventory-Management-System",
   },
 ];
@@ -65,11 +73,11 @@ const HeroSection = () => {
         <p className="text-lg text-white mb-6">
           {services[activeService].description}
         </p>
-        <Link href={services[activeService].link}>
+        {/* <Link href={services[activeService].link}>
           <button className="btn btn-ghost bg-blue text-white px-6 hover:text-bg hover:border-2 hover:border-blue text-lg">
             Learn More
           </button>
-        </Link>
+        </Link> */}
       </div>
     </div>
   );

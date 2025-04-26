@@ -9,10 +9,15 @@ import { IconArrowRightCircle } from "@tabler/icons-react";
 import { poppins } from "@/utils/font/fonts";
 import Link from "next/link";
 import SplashScreen from "@/components/SplashScreen";
+import { useRouter } from "next/navigation";
 
 // Remove metadata export here
 
 export default function RootLayout({ children }) {
+  const router = useRouter();
+  // useEffect(() => {
+  //   router.push("/Home");
+  // }, []);
   const [loading, setLoading] = useState(true);
   useEffect(() => {
     const timer = setTimeout(() => setLoading(false), 4000);
@@ -25,7 +30,7 @@ export default function RootLayout({ children }) {
         <title>Hogg Anderson | Accounting & Business Solutions</title>
         <meta
           name="description"
-          content="Hogg Anderson specializes in accounting, inventory management, and financial solutions tailored to the hospitality industry."
+          content="Empowering SMEs in Nigeria with expert financial services including bookkeeping, payroll, tax consulting, and management reporting."
         />
         <meta
           name="keywords"
