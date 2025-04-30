@@ -99,14 +99,14 @@ const NavBar = () => {
                   />
                 </Link>
               </Drawer.Header> */}
-              <div className=" w-full  h-full">
+              {/* <div className=" w-full  h-full">
                 <ul className="menu menu-vertical text-xl text-white font-bold md:text-base px-1">
                   <li>
                     <Link onClick={close} href="/">
                       Home
                     </Link>
                   </li>
-                  {/* <li>
+                  <li>
                     <Link onClick={close} href="/About">
                       About
                     </Link>
@@ -231,9 +231,9 @@ const NavBar = () => {
                     <Link onClick={close} href="/getInTouch">
                       Contact
                     </Link>
-                  </li> */}
+                  </li>
                 </ul>
-              </div>
+              </div> */}
             </Drawer>
           </div>
         </div>
@@ -251,7 +251,7 @@ const NavBar = () => {
       </div>
 
       {/* desktop nav */}
-      {/* <div className="navbar-center hidden lg:flex">
+      <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal text-base px-1">
           <li>
             <Link href="/">Home</Link>
@@ -344,7 +344,7 @@ const NavBar = () => {
             <Link href="/getInTouch">Contact</Link>
           </li>
         </ul>
-      </div> */}
+      </div>
 
       {/* <div className="navbar-end md:flex hidden">
         <Button
