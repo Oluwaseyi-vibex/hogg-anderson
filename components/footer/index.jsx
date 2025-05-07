@@ -1,4 +1,5 @@
 import {
+  IconBrandFacebook,
   IconBrandGmail,
   IconBrandInstagram,
   IconBrandWhatsapp,
@@ -83,6 +84,10 @@ const Footer = () => {
         <h6 className="footer-title">Socials</h6>
 
         <div className="flex space-x-3">
+          <a target="_blank" href="https://www.facebook.com/share/1BsBK19MAc/">
+            <IconBrandFacebook size={35} />
+          </a>
+
           <a
             target="_blank"
             href="https://www.instagram.com/hoggsolution/profilecard/?igsh=MTY0Y28xazN3bmQ5Zg=="

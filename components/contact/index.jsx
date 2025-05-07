@@ -10,7 +10,6 @@ import {
   SimpleGrid,
   Notification,
 } from "@mantine/core";
-import { ContactIconsList } from "./ContactIcons.jsx";
 import classes from "./GetInTouch.module.css";
 import emailjs from "@emailjs/browser";
 import { useState } from "react";
@@ -21,7 +20,8 @@ export default function GetInTouch() {
     handleSubmit,
     formState: { errors },
     reset,
-  } = useForm();
+  } = useForm({ mode: "onSubmit" });
+
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState(null);
@@ -32,7 +32,6 @@ export default function GetInTouch() {
     setSuccess(false);
 
     try {
-      // Configure EmailJS with your service details
       const templateParams = {
         from_name: data.name,
         from_email: data.email,
@@ -41,7 +40,6 @@ export default function GetInTouch() {
         to_email: "contact@hogganderson.com.ng",
       };
 
-      // Send email using EmailJS
       await emailjs.send(
         process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
         process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
@@ -50,8 +48,9 @@ export default function GetInTouch() {
       );
 
       setSuccess(true);
-      reset(); // Reset form after successful submission
+      reset();
     } catch (err) {
+      console.error("EmailJS error:", err);
       setError("Failed to send the message. Please try again later.");
     } finally {
       setLoading(false);
@@ -67,17 +66,13 @@ export default function GetInTouch() {
             backgroundImage: `url(/hero2.jpg)`,
             backgroundColor: "#4169E1",
           }}
-        >
-          {/* <Text fz="lg" fw={700} className={`${classes.title}`} c="#fff">
-            Contact information
-          </Text> */}
-
-          {/* <ContactIconsList /> */}
-        </div>
+        ></div>
 
         <form
           className={`${classes.form} bg-[#F5F5F5]`}
-          onSubmit={handleSubmit(onSubmit)}
+          onSubmit={handleSubmit(onSubmit, (formErrors) =>
+            console.log("Form errors:", formErrors)
+          )}
         >
           <Text fz="xl" fw={700} className={classes.title}>
             Get in touch
@@ -104,29 +99,25 @@ export default function GetInTouch() {
             )}
 
             <SimpleGrid cols={{ base: 1, sm: 2 }}>
-              <div>
-                <TextInput
-                  label="Your name"
-                  placeholder="Your name"
-                  {...register("name", { required: "Name is required" })}
-                  error={errors.name?.message}
-                />
-              </div>
-              <div>
-                <TextInput
-                  label="Your email"
-                  placeholder="hello@mantine.dev"
-                  {...register("email", {
-                    required: "Email is required",
-                    pattern: {
-                      value: /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/,
-                      message: "Invalid email address",
-                    },
-                  })}
-                  error={errors.email?.message}
-                  required
-                />
-              </div>
+              <TextInput
+                label="Your name"
+                placeholder="Your name"
+                {...register("name", { required: "Name is required" })}
+                error={errors.name?.message}
+              />
+
+              <TextInput
+                label="Your email"
+                placeholder="hello@example.com"
+                {...register("email", {
+                  required: "Email is required",
+                  pattern: {
+                    value: /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/i,
+                    message: "Invalid email address",
+                  },
+                })}
+                error={errors.email?.message}
+              />
             </SimpleGrid>
 
             <TextInput
@@ -135,7 +126,6 @@ export default function GetInTouch() {
               placeholder="Subject"
               {...register("subject", { required: "Subject is required" })}
               error={errors.subject?.message}
-              required
             />
 
             <Textarea

@@ -53,15 +53,17 @@ const About = () => {
           <div className="text-5xl hidden md:text-6xl max-h-full md:flex gap-5 font-semibold tracking-wider md:leading-[70px] text-[#F5F5F5]">
             <div className="w-[10px] md:h-[140px] bg-[#4169E1] rounded-l-xl"></div>
             <p>
-              What is Hogg Anderson and <br /> How Valid is It?
+              What is Hogg Anderson and <br /> What do we do?
             </p>
           </div>
           <p className="text-sm md:text-lg md:w-[700px] text-[#F5F5F5]/50">
-            At Hogg Anderson Business Solutions Limited, we specialize in
-            providing cost accounting and business solutions for the hospitality
-            industry. With a commitment to excellence, we empower restaurants,
-            lounges, and hotels to optimize their financial processes and boost
-            profitability.
+            At Hogg Anderson, we specialize in providing accurate, reliable, and
+            tailored bookkeeping services for small and medium-sized enterprises
+            (SMEs) across Nigeria. We understand the unique challenges faced by
+            businesses in maintaining financial records, tracking expenses, and
+            staying compliant with tax regulations. That’s why we are here—to
+            help you simplify your finances, make informed decisions, and grow
+            with confidence.
           </p>
         </div>
       </div>
@@ -86,97 +88,61 @@ const About = () => {
             <p>About Us</p>
           </div>
 
-          <h1 className="text-4xl text-[#333333] font-semibold">
-            Our Company Overview
+          <h1 className="text-2xl text-[#333333] font-semibold">
+            Why Choose Us?{" "}
           </h1>
-          <p>
-            Hogg Anderson Business Solutions Limited is a dynamic and trusted
-            accounting and business solutions firm, specializing in cost
-            accounting, inventory management, and financial optimization for the
-            hospitality industry. With over 20 years of experience, we provide
-            tailored services that empower restaurants, lounges, and hotels to
-            streamline their operations, reduce costs, and improve
-            profitability.
-          </p>
-          {/* <div className="flex gap-8">
-            <button className="font-normal btn rounded-sm h-fit min-h-fit py-4 hover:text-white bg-[#FFCC99] border-none text-white text-lg px-6">
-              Company
-            </button>
-            <button className="font-normal btn rounded-sm h-fit min-h-fit py-4 hover:text-white bg-[#E8E8E8] border-none text-black text-lg px-6">
-              Industries
-            </button>
-            <button className="font-normal btn rounded-sm h-fit min-h-fit py-4 hover:text-white bg-[#E8E8E8] border-none text-black text-lg px-6">
-              Our Team
-            </button>
-          </div> */}
-
-          <p>
-            At Hogg Anderson Business Solutions Limited, we don’t just crunch
-            numbers—we empower your business to reach new heights. Our mission
-            is to be an integral part of your growth journey, serving as the
-            driving force behind your success. We’re not just accountants; we’re
-            business enthusiasts with a passion for seeing brands thrive.
-          </p>
 
           <div className="flex flex-col gap-3">
-            <h1 className="text-2xl font-medium">
-              Your Preferred and Trusted Business Advisor
+            <List icon={<IconCheck />} className="list-disc  space-y-2">
+              <List.Item>
+                Our professional bookkeeping services ensure your records are
+                organized, up-to-date, and ready for financial analysis.{" "}
+              </List.Item>
+              <List.Item>
+                We customize our approach to suit the needs of growing
+                businesses, making financial management simple and stress-free.
+              </List.Item>
+              <List.Item>
+                Stay compliant with Nigerian tax and regulatory requirements
+                with our precision-driven bookkeeping strategies.
+              </List.Item>
+              <List.Item>
+                We help you leverage financial insights to optimize your cash
+                flow and maximize profitability.
+              </List.Item>
+              <List.Item>
+                Whether you're a startup or an established business, our
+                services grow with you.
+              </List.Item>
+            </List>
+          </div>
+
+          <div className="flex flex-col gap-3">
+            <h1 className="text-2xl text-[#333333] font-semibold">
+              Our Services Include:{" "}
             </h1>
-            <p>
-              As your go-to business advisor, we offer much more than
-              traditional accounting services. We help you:
-            </p>
+
             <List icon={<IconCheck />} className="list-disc">
+              <List.Item>General Bookkeeping & Record Management</List.Item>
+              <List.Item>Accounts Payable & Receivable Tracking</List.Item>
+              <List.Item>Bank Reconciliation & Financial Reporting </List.Item>
               <List.Item>
-                Maintain an organized, streamlined accounting system
+                Tax Preparation Support & Compliance Assistance
               </List.Item>
-              <List.Item>
-                Gain valuable insights into your business performance for
-                informed financial decisions
-              </List.Item>
-              <List.Item>
-                Reduce tax liabilities and stay compliant with regulations
-              </List.Item>
-              <List.Item>
-                Access alternative funding solutions to grow your business
-              </List.Item>
-              <List.Item>
-                Save money, cut costs, and enhanceli li profit margins
-              </List.Item>
-              <List.Item>
-                Receive expert advice with free professional consultations
-              </List.Item>
-              <List.Item>
-                Purchase services on a flexible pay-as-you-go basis
-              </List.Item>
+              <List.Item>Payroll Management & Expense Tracking</List.Item>
+              <List.Item>Financial Consulting & Advisory Services</List.Item>
             </List>
           </div>
 
           <div className="flex flex-col gap-3">
-            <h1 className="text-2xl font-medium">Who We Work With</h1>
-            <p>We proudly support a wide range of businesses, including:</p>
-            <List icon={<IconCheck />} className="list-disc">
-              <List.Item>
-                Owner-managed businesses (Sole Proprietors, Partnerships,
-                Limited Liability Companies)
-              </List.Item>
-              <List.Item>Expatriates running local businesses</List.Item>
-              <List.Item>Professional associations and groups</List.Item>
-            </List>
-          </div>
-
-          <div className="flex flex-col gap-3">
-            <h1 className="text-2xl font-medium">
+            <h1 className="text-2xl text-[#333333] font-semibold">
               Specialist Industry Expertise
             </h1>
-            <p>
-              While we work with all types of businesses, we have significant
-              expertise in:
-            </p>
+
             <List icon={<IconCheck />} className="list-disc">
               <List.Item>Hospitality (Restaurants, Lounges, Hotels)</List.Item>
               <List.Item>Real Estate</List.Item>
-              <List.Item>Transportation </List.Item>
+              <List.Item>Transportation</List.Item>
               <List.Item>Information Technology</List.Item>
               <List.Item>Trading & Distribution</List.Item>
               <List.Item>Professional Services</List.Item>
@@ -184,7 +150,7 @@ const About = () => {
             </List>
           </div>
 
-          <div className="flex flex-col gap-3">
+          {/* <div className="flex flex-col gap-3">
             <h1 className="text-2xl  font-medium">
               Nigeria’s Leading Business Advisor for Hospitality and Beyond
             </h1>
@@ -203,7 +169,7 @@ const About = () => {
               strive to exceed your expectations and be your trusted partner in
               business success.
             </p>
-          </div>
+          </div> */}
 
           <div className="flex flex-col gap-3">
             <h1 className="text-2xl font-medium">Our Commitment</h1>
@@ -215,15 +181,17 @@ const About = () => {
             </p>
           </div>
           <p>
+            Let us handle the numbers while you focus on building your business!
+            <br />
             <a
               target="_blank"
               href={"https://wa.link/54pg2j"}
               className="link link-hover text-blue italic"
             >
-              Book a consultation
+              Contact us
             </a>{" "}
-            with our team today and let’s discuss how we can help your business
-            grow.
+            today to discover how Hogg Anderson can streamline your bookkeeping
+            process and set your business up for success.
           </p>
         </div>
       </div>
