@@ -2,14 +2,18 @@
 import Image from "next/image";
 import React from "react";
 import teamMembers from "@/data/teamData";
-import { List, ThemeIcon } from "@mantine/core";
+import { Blockquote, List, ThemeIcon } from "@mantine/core";
 import {
   IconCheck,
   IconCircleCheck,
   IconCircleDashed,
   IconDots,
+  IconInfoCircle,
 } from "@tabler/icons-react";
+
 const Lawal = () => {
+  const iconInfoCircle = <IconInfoCircle />;
+
   return (
     <div className="w-full md:px-48 mt-16 flex">
       <div className="w-[40%] h-full">
@@ -21,7 +25,7 @@ const Lawal = () => {
           height={500}
         />
 
-        <div className="mt-24 space-y-4 text-blue">
+        <div className="my-28 space-y-4 text-blue">
           <h1 className=" text-2xl font-bold">Core Expertise:</h1>
           <List
             spacing="xs"
@@ -39,6 +43,19 @@ const Lawal = () => {
             <List.Item>Business Growth & Profitability Analysis</List.Item>
           </List>
         </div>
+
+        <Blockquote
+          color="blue"
+          //   cite="– Forrest Gump"
+          icon={iconInfoCircle}
+          mt="xl"
+          c={"white"}
+          w={"300px"}
+        >
+          With a reputation for precision, integrity, and strategic financial
+          leadership, Lawal is dedicated to empowering businesses with the
+          financial clarity they need to thrive.
+        </Blockquote>
       </div>
 
       <div className="w-[60%] text-white h-full">
