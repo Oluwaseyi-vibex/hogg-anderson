@@ -92,7 +92,7 @@ const Lawal = () => {
             size="md"
             center
             icon={
-              <ThemeIcon color="teal" size={24} radius="xl">
+              <ThemeIcon color="blue" size={24} radius="xl">
                 <IconCheck size={16} />
               </ThemeIcon>
             }
