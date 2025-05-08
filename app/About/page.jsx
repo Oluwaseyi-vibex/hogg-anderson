@@ -1,4 +1,5 @@
 "use client";
+import { TeamPage } from "@/components";
 import GetInTouch from "@/components/contact";
 import { ContactIconsList } from "@/components/contact/ContactIcons";
 import OurVision from "@/components/ourVision";
@@ -30,10 +31,12 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
+import teamMembers from "@/data/teamData";
+
 const About = () => {
   return (
     <div
-      className={`${poppins.className} h-full flex flex-col gap-8 pt-8 md:pt-16 `}
+      className={`${poppins.className} h-full flex flex-col gap-0 pt-8 md:pt-16 `}
     >
       <div className="md:px-24 px-4 flex  flex-col gap-12 h-full md:pb-24">
         <div className="flex items-center h-fit  gap-4 text-sm md:text-md text-[#F5F5F5]/60">
@@ -95,24 +98,27 @@ const About = () => {
           <div className="flex flex-col gap-3">
             <List icon={<IconCheck />} className="list-disc  space-y-2">
               <List.Item>
-                Our professional bookkeeping services ensure your records are
-                organized, up-to-date, and ready for financial analysis.{" "}
+                Expert Financial Management - Our professional bookkeeping
+                services ensure your records are organized, up-to-date, and
+                ready for financial analysis.{" "}
               </List.Item>
               <List.Item>
-                We customize our approach to suit the needs of growing
-                businesses, making financial management simple and stress-free.
+                SME-Focused Solutions - We customize our approach to suit the
+                needs of growing businesses, making financial management simple
+                and stress-free.
               </List.Item>
               <List.Item>
-                Stay compliant with Nigerian tax and regulatory requirements
-                with our precision-driven bookkeeping strategies.
+                Compliance & Accuracy - Stay compliant with Nigerian tax and
+                regulatory requirements with our precision-driven bookkeeping
+                strategies.
               </List.Item>
               <List.Item>
-                We help you leverage financial insights to optimize your cash
-                flow and maximize profitability.
+                Data-Driven Growth - We help you leverage financial insights to
+                optimize your cash flow and maximize profitability.
               </List.Item>
               <List.Item>
-                Whether you're a startup or an established business, our
-                services grow with you.
+                Scalable Support - Whether you&apos;re a startup or an
+                established business, our services grow with you.
               </List.Item>
             </List>
           </div>
@@ -195,8 +201,11 @@ const About = () => {
           </p>
         </div>
       </div>
+      <TeamPage teamMembers={teamMembers} />
 
-      <TestimonialCarousel />
+      <div className="mt-8">
+        <TestimonialCarousel />
+      </div>
     </div>
   );
 };

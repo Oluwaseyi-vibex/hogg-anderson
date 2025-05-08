@@ -27,11 +27,12 @@
     "gsap": "^3.12.5",
     "next": "14.2.8",
     "react": "^18",
+    "react-card-flip": "^1.2.3",
     "react-dom": "^18",
     "react-fast-marquee": "^1.6.5",
     "react-hook-form": "^7.56.1",
     "react-responsive-carousel": "^3.2.23",
-    "swiper": "^11.1.14"
+    "swiper": "^11.2.6"
   },
   "devDependencies": {
     "daisyui": "^4.12.10",
