@@ -99,7 +99,7 @@ const NavBar = () => {
                   />
                 </Link>
               </Drawer.Header> */}
-              {/* <div className=" w-full  h-full">
+              <div className=" w-full  h-full">
                 <ul className="menu menu-vertical text-xl text-white font-bold md:text-base px-1">
                   <li>
                     <Link onClick={close} href="/">
@@ -233,7 +233,7 @@ const NavBar = () => {
                     </Link>
                   </li>
                 </ul>
-              </div> */}
+              </div>
             </Drawer>
           </div>
         </div>
