@@ -50,7 +50,7 @@ export default function TeamCard({ member }) {
         </ReactCardFlip>
       </div>
       <Link href={member.link}>
-        <button className="btn btn-outline btn-info w-auto uppercase mx-4">
+        <button className="btn btn-outline outline-[#f5f5f5] w-auto uppercase mx-4">
           view more
         </button>
       </Link>

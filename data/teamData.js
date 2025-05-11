@@ -5,7 +5,7 @@ const teamMembers = [
     image: "/team/lawal.png", // Replace with actual images
     link: "/About/lawal",
     frontText: "18+ years of financial experience",
-    backText: `Lawal is a seasoned chartered accountant with experience in taxation, ERP, auditing, and strategic planning across hospitality, manufacturing, and services. Former roles include Head of Finance at BON Hotel and Group Head at Yacht Hotel.`,
+    backText: `Lawal Mohammed is a seasoned chartered accountant with over 18 years of experience spanning multiple industries, bringing a wealth of financial expertise, strategic insights, and a commitment to excellence...`,
   },
   {
     name: "KODELEYIRI EVANS EMMANUEL",
