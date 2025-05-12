@@ -8,18 +8,29 @@ const Oluwaseyi = () => {
   const iconInfoCircle = <IconInfoCircle />;
 
   return (
-    <div className="w-full md:px-48 mt-16 flex">
-      <div className="w-[40%] h-full">
-        <Image
-          src="/team/oluwaseyi.png"
-          alt="Oluwaseyi"
-          className="w-[60%]"
-          width={500}
-          height={500}
-        />
+    <div className="w-full md:px-48 md:mt-16 mt-6 md:flex-row flex-col px-5 flex">
+      <div className="space-y-2 md:hidden ">
+        <h1 className="text-blue font-bold text-xl uppercase">
+          KODELEYIRI OLUWASEYIFUNMI EZEKIEL
+        </h1>
+        <p className="text-white font-light text-lg">
+          Technology & Digital Solutions Specialist
+        </p>
+      </div>
 
-        <div className="my-16 space-y-4 text-blue">
-          <h1 className=" text-2xl font-bold">Core Expertise:</h1>
+      <div className="md:w-[40%] w-full mt-8 h-full">
+        <div className="w-full flex md:items-start items-center md:justify-normal justify-center">
+          <Image
+            src="/team/oluwaseyi.png"
+            alt="Oluwaseyi"
+            className="md:w-[60%] w-[90%]"
+            width={500}
+            height={500}
+          />
+        </div>
+
+        <div className="md:my-28 my-14 w-full space-y-4 text-blue">
+          <h1 className=" text-xl md:text-2xl font-bold">Core Expertise:</h1>
           <List
             spacing="xs"
             size="md"
@@ -52,8 +63,8 @@ const Oluwaseyi = () => {
         </Blockquote>
       </div>
 
-      <div className="w-[60%] text-white h-full">
-        <div className="space-y-2">
+      <div className="w-full md:w-[60%] text-white h-full">
+        <div className="space-y-2 md:block hidden">
           <h1 className="text-blue font-bold text-3xl uppercase">
             KODELEYIRI OLUWASEYIFUNMI EZEKIEL
           </h1>
@@ -63,7 +74,8 @@ const Oluwaseyi = () => {
         </div>
 
         <div className="divider"></div>
-        <div className="space-y-8 font-extralight text-lg">
+
+        <div className="space-y-8 mb-8 font-extralight text-lg">
           <p className="">
             Oluwaseyifunmi Ezekiel is a highly skilled Computer Science graduate
             from the University of Africa, Toro-Orua, Bayelsa State, Nigeria,
