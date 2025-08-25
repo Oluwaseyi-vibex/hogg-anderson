@@ -37,7 +37,7 @@ export default function TeamCard({ member }) {
           </div>
 
           {/* Back */}
-          <div className="card bg-orange text-bg shadow-xl h-[450px]">
+          <div className="card bg-white text-bg shadow-xl h-[450px]">
             <div className="card-body">
               <h2 className="card-title">{member.name}</h2>
               <p className="text-sm text-blue">{member.title}</p>
@@ -50,8 +50,8 @@ export default function TeamCard({ member }) {
         </ReactCardFlip>
       </div>
       <Link href={member.link}>
-        <button className="btn btn-outline outline-[#f5f5f5] w-auto uppercase mx-4">
-          view more
+        <button className="btn btn-outline outline-white font-light text-white hover:bg-white hover:text-bg w-auto uppercase mx-4">
+          learn more
         </button>
       </Link>
     </div>

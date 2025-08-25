@@ -201,7 +201,7 @@ const About = () => {
           </p>
         </div>
       </div>
-      <TeamPage teamMembers={teamMembers} />
+      {/* <TeamPage teamMembers={teamMembers} /> */}
 
       <div className="mt-8">
         <TestimonialCarousel />

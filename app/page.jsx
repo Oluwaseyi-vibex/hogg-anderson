@@ -120,47 +120,11 @@ export default function Home() {
 
   return (
     <div className={`${poppins.className} w-full overflow-hidden`}>
-      {/* <main className="flex w-full items-start  justify-end"> */}
-      {/* <div className="flex flex-col gap-3 w-full">
-          <p className="rounded-full shadow-md shadow-black cursor-pointer font-light border-white border-[0.5px] w-fit bg-transparent py-1 px-8 text-sm text-[#4169E1]">
-            Hogg Anderson Business Solutions Limited
-          </p>
-          <h1 className="text-[70px] text-[#F5F5F5] leading-tight font-semibold ">
-            Inventory
-            <div className="relative">
-              <span className="relative z-10">
-                <span className="relative z-10">Management</span>{" "}
-                <span className="w-full absolute h-[40%] bottom-4 left-0 z-0 bg-[#4169E1]"></span>
-              </span>
-            </div>
-            Solutions.
-          </h1>
-          <p className="text-sm text-[#F5F5F5]/40 w-[550px]">
-            At Hogg Anderson Business Solutions, we provide expert accounting
-            services, inventory management systems, and implementation of
-            accounting software to streamline your business operations. Our
-            business advisory services offer strategic guidance to drive growth.
-          </p>
-          <Button
-            rightSection={<IconArrowRight size={20} />}
-            variant="gradient"
-            // gradient={{ deg: 133, from: "pink", to: "black" }}
-            size="xl"
-            bg={"#4169E1"}
-            radius="md"
-            mt="xl"
-            justify="space-between"
-            w={250}
-          >
-            Get started
-          </Button>
-        </div> */}
-
       <HeroCarousel />
       {/* </main> */}
 
-      <div className="w-full bg-[url('/wave2.svg')] bg-cover bg-center flex md:flex-row flex-col space-y-8 py-12 md:py-24 md:px-16 text-bg bg-[#F5F5F5] h-full rounded-b-3xl ">
-        <div className="flex md:w-[30%] px-4 h-full flex-col gap-2 md:gap-6">
+      <div className="w-full bg-[url('/wave2.svg')] bg-cover bg-center flex md:flex-row lg:flex-col flex-col space-y-8 py-12 md:py-24 md:px-16 text-bg bg-[#F5F5F5] h-full rounded-b-3xl ">
+        <div className="flex sm:w-[70%] md:w-full px-4 h-full flex-col gap-2 md:gap-6">
           <h1 ref={headingRef} className="text-4xl font-semibold ">
             Bringing to you
           </h1>
@@ -189,12 +153,12 @@ export default function Home() {
           </Link>
         </div>
 
-        <div className="md:w-[70%] flex flex-col md:gap-16 gap-8 items-center md:items-end h-full">
-          <div className="flex md:flex-row flex-col gap-12">
+        <div className=" flex flex-col md:gap-16 gap-8 items-center  h-full">
+          <div className="flex md:flex-row flex-col lg:gap-28 gap-12">
             <ServicesCard
               img={"/financial-accuracy.png"}
               title="Bookkeeping Outsourcing"
-              imgWidth={`35%`}
+              imgWidth={`40%`}
               description={
                 "Our expert bookkeeping services ensure accurate and compliant financial records. We handle income/expense tracking, bank reconciliations, accounts management, and financial statements, freeing you to focus on growth."
               }
@@ -203,7 +167,7 @@ export default function Home() {
             <ServicesCard
               img={"/cost-control.jpg"}
               title={"Management Reporting"}
-              imgWidth={`35%`}
+              imgWidth={`40%`}
               description={
                 "Gain data-driven insights with our tailored reporting solutions. We provide monthly/quarterly reports, cash flow analysis, budgeting, and performance tracking to empower informed decision-making"
               }
@@ -211,11 +175,11 @@ export default function Home() {
             />
           </div>
 
-          <div className="flex  md:flex-row flex-col gap-12">
+          <div className="flex  md:flex-row flex-col lg:gap-28 gap-12">
             <ServicesCard
               img={"/office.jpg"}
               title={"Payroll Processing"}
-              imgWidth={"35%"}
+              imgWidth={"40%"}
               description={
                 "Streamline payroll with our efficient solutions. We manage computations, statutory deductions, payslip generation, and compliance, ensuring accuracy and timely payments for your team."
               }

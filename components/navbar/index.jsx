@@ -32,62 +32,66 @@ const NavBar = () => {
   return (
     <div
       ref={navRef}
-      className={`${poppins.className} sticky top-0 opacity-25   z-50 w-full md:px-16 px-4 py-4 md:py-6  flex items-center  shadow-bg/65 shadow-md  justify-center navbar font-semibold  bg-[#333333] text-[#F5F5F5]`}
+      className={`${poppins.className} sticky top-0 opacity-25   z-50 w-full md:px-16 px-4 py-2 md:py-1  flex flex-col shadow-bg/65 shadow-md   navbar font-semibold  bg-[#333333] text-[#F5F5F5]`}
     >
-      <div className=" md:flex-row  md:justify-start justify-between flex-row-reverse">
-        <div className="dropdown">
-          <Burger
-            opened={opened}
-            onClick={open}
-            aria-label="Toggle navigation"
-            color={Colors.white}
-            size={"md"}
-            className="md:hidden "
-          />
-
-          <div className=" w-full">
-            <Drawer
-              position="top"
-              size="md"
-              // offset={8}
-              overlayProps={{ backgroundOpacity: 0.5, blur: 4 }}
+      <div className="mb-2 text-xs md:px-16 text-white font-light flex w-fit md:flex-row  md:justify-start justify-between flex-row-reverse">
+        <p>Call Us Today! +234 913 581 6426 or +234 802 951 4484</p>
+      </div>
+      <div>
+        <div className="flex w-full md:flex-row  md:justify-start justify-between flex-row-reverse">
+          <div className="dropdown">
+            <Burger
               opened={opened}
-              onClose={close}
-              styles={{
-                // root: {
-                //   border: "1px solid #ce2121", // Style the root element
-                // },
-                // inner: {
-                //   backgroundColor: "#fff", // Style the element centering the drawer
-                // },
-                content: {
-                  backgroundColor: Colors.bg, // Style the drawer content
-                  // marginTop: "70px", // Add rounded corners to the drawer content
-                },
-                close: {
-                  color: Colors.white,
-                  fontSize: "24px", // Increase the size of the close button
-                  width: "50px", // Adjust width if necessary
-                  height: "50px",
-                },
-                header: {
-                  // display: "none",
-                  backgroundColor: "#333", // Style the header (title and close button container)
-                  color: "#fff", // Make header text white
-                  padding: "10px 0px", // Add padding to the header
-                },
-                title: {
-                  fontSize: "1.5rem", // Style the drawer title
-                },
-                body: {
-                  // padding: "20px", // Style the drawer body (content area)
-                  backgroundColor: Colors.bg,
-                  height: "100%",
-                  color: "white",
-                },
-              }}
-            >
-              {/* <Drawer.Header>
+              onClick={open}
+              aria-label="Toggle navigation"
+              color={Colors.white}
+              size={"md"}
+              className="md:hidden "
+            />
+
+            <div className=" w-full">
+              <Drawer
+                position="top"
+                size="md"
+                // offset={8}
+                overlayProps={{ backgroundOpacity: 0.5, blur: 4 }}
+                opened={opened}
+                onClose={close}
+                styles={{
+                  // root: {
+                  //   border: "1px solid #ce2121", // Style the root element
+                  // },
+                  // inner: {
+                  //   backgroundColor: "#fff", // Style the element centering the drawer
+                  // },
+                  content: {
+                    backgroundColor: Colors.bg, // Style the drawer content
+                    // marginTop: "70px", // Add rounded corners to the drawer content
+                  },
+                  close: {
+                    color: Colors.white,
+                    fontSize: "24px", // Increase the size of the close button
+                    width: "50px", // Adjust width if necessary
+                    height: "50px",
+                  },
+                  header: {
+                    // display: "none",
+                    backgroundColor: "#333", // Style the header (title and close button container)
+                    color: "#fff", // Make header text white
+                    padding: "10px 0px", // Add padding to the header
+                  },
+                  title: {
+                    fontSize: "1.5rem", // Style the drawer title
+                  },
+                  body: {
+                    // padding: "20px", // Style the drawer body (content area)
+                    backgroundColor: Colors.bg,
+                    height: "100%",
+                    color: "white",
+                  },
+                }}
+              >
+                {/* <Drawer.Header>
                 <Link href={"/"}>
                   {" "}
                   <Image
@@ -99,266 +103,262 @@ const NavBar = () => {
                   />
                 </Link>
               </Drawer.Header> */}
-              <div className=" w-full  h-full">
-                <ul className="menu menu-vertical text-xl text-white font-bold md:text-base px-1">
-                  <li>
-                    <Link onClick={close} href="/">
-                      Home
-                    </Link>
-                  </li>
-                  <li>
-                    <Link onClick={close} href="/About">
-                      About
-                    </Link>
-                  </li>
-                  <li>
-                    <div className="dropdown dropdown-bottom dropdown-end dropdown-hover">
-                      <div tabIndex={0} role="button" className="">
-                        Services
+                <div className=" w-full  h-full">
+                  <ul className="menu menu-vertical text-xl text-white font-bold md:text-base px-1">
+                    <li>
+                      <Link onClick={close} href="/">
+                        Home
+                      </Link>
+                    </li>
+                    <li>
+                      <Link onClick={close} href="/About">
+                        About
+                      </Link>
+                    </li>
+                    <li>
+                      <Link onClick={close} href="/our-team">
+                        Our Team
+                      </Link>
+                    </li>
+                    <li>
+                      <div className="dropdown dropdown-bottom dropdown-end dropdown-hover">
+                        <div tabIndex={0} role="button" className="">
+                          Services
+                        </div>
+                        <ul
+                          tabIndex={0}
+                          className="dropdown-content menu bg-orange  text-bg z-[1] w-56 p-2 shadow"
+                        >
+                          <li>
+                            <Link
+                              onClick={close}
+                              href={"/Services/Accounting-Services"}
+                            >
+                              Accounting Services
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              onClick={close}
+                              href={"/Services/Inventory-Management-System"}
+                            >
+                              Inventory Management System
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              onClick={close}
+                              href={"/Services/Sales-Analytics"}
+                            >
+                              Sales Analytics
+                            </Link>
+                          </li>
+                          <li className="w-full">
+                            <Link
+                              onClick={close}
+                              href={"/Services/Accounting-System"}
+                            >
+                              Accounting System
+                            </Link>
+                          </li>
+
+                          <li className="w-full">
+                            <Link
+                              onClick={close}
+                              href={"/Services/Business-Advisory"}
+                            >
+                              Business Advisory
+                            </Link>
+                          </li>
+                          <li className="w-full">
+                            <Link onClick={close} href={"/Services/Training"}>
+                              Training
+                            </Link>
+                          </li>
+                        </ul>
                       </div>
-                      <ul
-                        tabIndex={0}
-                        className="dropdown-content menu bg-orange  text-bg z-[1] w-56 p-2 shadow"
-                      >
-                        <li>
-                          <Link
-                            onClick={close}
-                            href={"/Services/Accounting-Services"}
-                          >
-                            Accounting Services
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            onClick={close}
-                            href={"/Services/Inventory-Management-System"}
-                          >
-                            Inventory Management System
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            onClick={close}
-                            href={"/Services/Sales-Analytics"}
-                          >
-                            Sales Analytics
-                          </Link>
-                        </li>
-                        <li className="w-full">
-                          <Link
-                            onClick={close}
-                            href={"/Services/Accounting-System"}
-                          >
-                            Accounting System
-                          </Link>
-                        </li>
+                    </li>
 
-                        <li className="w-full">
-                          <Link
-                            onClick={close}
-                            href={"/Services/Business-Advisory"}
-                          >
-                            Business Advisory
-                          </Link>
-                        </li>
-                        <li className="w-full">
-                          <Link onClick={close} href={"/Services/Training"}>
-                            Training
-                          </Link>
-                        </li>
-                      </ul>
-                    </div>
-                  </li>
+                    <li>
+                      <div className="dropdown dropdown-bottom dropdown-end dropdown-hover">
+                        <div tabIndex={0} role="button" className="">
+                          Academy
+                        </div>
+                        <ul
+                          tabIndex={0}
+                          className="dropdown-content menu bg-orange text-bg  z-[1] w-56 p-2 shadow"
+                        >
+                          <li>
+                            <Link onClick={close} href={"/academy/data-entry"}>
+                              Data Entry Academy
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              onClick={close}
+                              href={"/academy/accounting-software-training"}
+                            >
+                              Accounting Software Training
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              onClick={close}
+                              href={"/academy/property-management-system"}
+                            >
+                              Property Mgt. System in Hotels
+                            </Link>
+                          </li>
+                          <li className="w-full">
+                            <Link
+                              onClick={close}
+                              href={"/academy/hospitality-accounting-diploma"}
+                            >
+                              Diploma in Hospitality Accounting
+                            </Link>
+                          </li>
 
-                  <li>
-                    <div className="dropdown dropdown-bottom dropdown-end dropdown-hover">
-                      <div tabIndex={0} role="button" className="">
-                        Academy
+                          <li className="w-full">
+                            <Link
+                              onClick={close}
+                              href={
+                                "/academy/adv-diploma-in-hospitality-accounting"
+                              }
+                            >
+                              Adv. Diploma in Hospitality Accounting
+                            </Link>
+                          </li>
+                        </ul>
                       </div>
-                      <ul
-                        tabIndex={0}
-                        className="dropdown-content menu bg-orange text-bg  z-[1] w-56 p-2 shadow"
-                      >
-                        <li>
-                          <Link onClick={close} href={"/academy/data-entry"}>
-                            Data Entry Academy
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            onClick={close}
-                            href={"/academy/accounting-software-training"}
-                          >
-                            Accounting Software Training
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            onClick={close}
-                            href={"/academy/property-management-system"}
-                          >
-                            Property Mgt. System in Hotels
-                          </Link>
-                        </li>
-                        <li className="w-full">
-                          <Link
-                            onClick={close}
-                            href={"/academy/hospitality-accounting-diploma"}
-                          >
-                            Diploma in Hospitality Accounting
-                          </Link>
-                        </li>
+                    </li>
+                    <li>
+                      <Link onClick={close} href="/Blog">
+                        Blog
+                      </Link>
+                    </li>
+                    <li>
+                      <Link onClick={close} href="/getInTouch">
+                        Contact
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+              </Drawer>
+            </div>
+          </div>
 
-                        <li className="w-full">
-                          <Link
-                            onClick={close}
-                            href={
-                              "/academy/adv-diploma-in-hospitality-accounting"
-                            }
-                          >
-                            Adv. Diploma in Hospitality Accounting
-                          </Link>
-                        </li>
-                      </ul>
-                    </div>
-                  </li>
+          <Link href={"/"}>
+            <Image
+              src={"/logo.png"}
+              alt="logo"
+              width={500}
+              height={500}
+              className="w-[40%] md:w-[20%]"
+            />
+          </Link>
+        </div>
+
+        {/* desktop nav */}
+        <div className="navbar-center hidden lg:flex">
+          <ul className="menu menu-horizontal text-base px-1">
+            <li>
+              <Link href="/">Home</Link>
+            </li>
+            <li>
+              <Link href="/About">About</Link>
+            </li>
+            <li>
+              <Link href="/our-team">Our Team</Link>
+            </li>
+            <li>
+              <div className="dropdown dropdown-bottom dropdown-end dropdown-hover">
+                <div tabIndex={0} role="button" className="">
+                  Services
+                </div>
+                <ul
+                  tabIndex={0}
+                  className="dropdown-content menu bg-orange text-bg mt-2 shadow-lg border-none  shadow-black z-[1] w-60 p-2 "
+                >
                   <li>
-                    <Link onClick={close} href="/Blog">
-                      Blog
+                    <Link href={"/Services/Accounting-Services"}>
+                      Accounting Services
                     </Link>
                   </li>
                   <li>
-                    <Link onClick={close} href="/getInTouch">
-                      Contact
+                    <Link href={"/Services/Inventory-Management-System"}>
+                      Inventory Management System
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href={"/Services/Sales-Analytics"}>
+                      Sales Analytics
+                    </Link>
+                  </li>
+                  <li className="w-full">
+                    <Link href={"/Services/Accounting-System"}>
+                      Accounting System
+                    </Link>
+                  </li>
+
+                  <li className="w-full">
+                    <Link href={"/Services/Business-Advisory"}>
+                      Business Advisory
+                    </Link>
+                  </li>
+                  <li className="w-full">
+                    <Link href={"/Services/Training"}>Training</Link>
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li>
+              <div className="dropdown dropdown-bottom dropdown-end dropdown-hover">
+                <div tabIndex={0} role="button" className="">
+                  Academy
+                </div>
+                <ul
+                  tabIndex={0}
+                  className="dropdown-content menu bg-orange text-bg z-[1] w-56 p-2 shadow-lg mt-2"
+                >
+                  <li>
+                    <Link href={"/academy/data-entry"}>Data Entry Academy</Link>
+                  </li>
+                  <li>
+                    <Link href={"/academy/accounting-software-training"}>
+                      Accounting Software Training
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href={"/academy/property-management-system"}>
+                      Property Mgt. System in Hotels
+                    </Link>
+                  </li>
+                  <li className="w-full">
+                    <Link href={"/academy/hospitality-accounting-diploma"}>
+                      Diploma in Hospitality Accounting
+                    </Link>
+                  </li>
+
+                  <li className="w-full">
+                    <Link
+                      href={"/academy/adv-diploma-in-hospitality-accounting"}
+                    >
+                      Adv. Diploma in Hospitality Accounting
                     </Link>
                   </li>
                 </ul>
               </div>
-            </Drawer>
-          </div>
+            </li>
+            <li>
+              <Link href="/Blog">Blog</Link>
+            </li>
+            <li>
+              <Link href="/getInTouch">Contact</Link>
+            </li>
+          </ul>
         </div>
-
-        <Link href={"/"}>
-          {" "}
-          <Image
-            src={"/logo.png"}
-            alt="logo"
-            width={500}
-            height={500}
-            className="w-[40%] md:w-[20%]"
-          />
-        </Link>
       </div>
-
-      {/* desktop nav */}
-      <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal text-base px-1">
-          <li>
-            <Link href="/">Home</Link>
-          </li>
-          <li>
-            <Link href="/About">About</Link>
-          </li>
-          <li>
-            <div className="dropdown dropdown-bottom dropdown-end dropdown-hover">
-              <div tabIndex={0} role="button" className="">
-                Services
-              </div>
-              <ul
-                tabIndex={0}
-                className="dropdown-content menu bg-orange text-bg mt-2 shadow-lg border-none  shadow-black z-[1] w-60 p-2 "
-              >
-                <li>
-                  <Link href={"/Services/Accounting-Services"}>
-                    Accounting Services
-                  </Link>
-                </li>
-                <li>
-                  <Link href={"/Services/Inventory-Management-System"}>
-                    Inventory Management System
-                  </Link>
-                </li>
-                <li>
-                  <Link href={"/Services/Sales-Analytics"}>
-                    Sales Analytics
-                  </Link>
-                </li>
-                <li className="w-full">
-                  <Link href={"/Services/Accounting-System"}>
-                    Accounting System
-                  </Link>
-                </li>
-
-                <li className="w-full">
-                  <Link href={"/Services/Business-Advisory"}>
-                    Business Advisory
-                  </Link>
-                </li>
-                <li className="w-full">
-                  <Link href={"/Services/Training"}>Training</Link>
-                </li>
-              </ul>
-            </div>
-          </li>
-
-          <li>
-            <div className="dropdown dropdown-bottom dropdown-end dropdown-hover">
-              <div tabIndex={0} role="button" className="">
-                Academy
-              </div>
-              <ul
-                tabIndex={0}
-                className="dropdown-content menu bg-orange text-bg z-[1] w-56 p-2 shadow-lg mt-2"
-              >
-                <li>
-                  <Link href={"/academy/data-entry"}>Data Entry Academy</Link>
-                </li>
-                <li>
-                  <Link href={"/academy/accounting-software-training"}>
-                    Accounting Software Training
-                  </Link>
-                </li>
-                <li>
-                  <Link href={"/academy/property-management-system"}>
-                    Property Mgt. System in Hotels
-                  </Link>
-                </li>
-                <li className="w-full">
-                  <Link href={"/academy/hospitality-accounting-diploma"}>
-                    Diploma in Hospitality Accounting
-                  </Link>
-                </li>
-
-                <li className="w-full">
-                  <Link href={"/academy/adv-diploma-in-hospitality-accounting"}>
-                    Adv. Diploma in Hospitality Accounting
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <Link href="/Blog">Blog</Link>
-          </li>
-          <li>
-            <Link href="/getInTouch">Contact</Link>
-          </li>
-        </ul>
-      </div>
-
-      {/* <div className="navbar-end md:flex hidden">
-        <Button
-          variant="gradient"
-          bg={"#4169E1"}
-          // gradient={{ deg: 133, from: "pink", to: "black" }}
-          size="md"
-          radius="lg"
-          w={180}
-          h={45}
-        >
-          Get started
-        </Button>
-      </div> */}
     </div>
   );
 };

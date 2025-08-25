@@ -9,28 +9,31 @@ import { TeamCard } from "..";
 
 export default function TeamCarousel({ teamMembers }) {
   return (
-    <div className="w-full bg-blue min-h-[700px] bg-[url('/team/teambg.svg')] bg-cover bg-no-repeat bg-center px-4 pt-20">
-      <Swiper
+    <div className="w-full bg-blue h-screen overflow-y-scroll bg-[url('/team/teambg.svg')] bg-cover bg-no-repeat bg-center px-4 pt-20">
+      {/* <Swiper
         modules={[Pagination, Navigation]}
-        spaceBetween={16}
+        spaceBetween={2}
         navigation
         centeredSlides={false}
         breakpoints={{
-          0: { slidesPerView: 1.1 },
-          640: { slidesPerView: 1.5 },
-          768: { slidesPerView: 2.1 },
-          1024: { slidesPerView: 2.5 },
+          0: { slidesPerView: 5 },
+          640: { slidesPerView: 5 },
+          768: { slidesPerView: 5 },
+          1024: { slidesPerView: 5 },
         }}
         className="team-carousel"
-      >
-        {teamMembers.map((member, index) => (
-          <SwiperSlide key={index} className="flex justify-center">
-            <div className="w-full max-w-sm">
-              <TeamCard member={member} />
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+      > */}
+      <div className="md:fixed top-8 z-40 text-center text-white text-sm">
+        SCROLL DOWN TO SEE ALL
+      </div>
+      {teamMembers.map((member, index) => (
+        <SwiperSlide key={index} className="flex justify-center">
+          <div className="w-full ">
+            <TeamCard member={member} />
+          </div>
+        </SwiperSlide>
+      ))}
+      {/* </Swiper> */}
     </div>
   );
 }

@@ -65,8 +65,8 @@ export default function RootLayout({ children }) {
             <div>
               <NavBar />
               {children}
-              <div className="flex justify-around w-full h-fit p-8 bg-[#F5F5F5] items-center">
-                <h1 className="text-xl font-semibold">
+              <div className="flex justify-around w-full h-fit md:px-0 md:py-0 py-4 px-3 font-light md:p-8 bg-[#F5F5F5] items-center">
+                <h1 className="md:text-xl text-xs font-medium md:font-semibold">
                   Get Started - See why our clients stay with us year after
                   year.
                 </h1>
