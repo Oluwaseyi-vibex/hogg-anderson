@@ -350,6 +350,11 @@ const NavBar = () => {
                 </ul>
               </div>
             </li>
+
+            <li>
+              <Link href="/our-courses">Our Courses</Link>
+            </li>
+
             <li>
               <Link href="/Blog">Blog</Link>
             </li>
